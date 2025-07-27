@@ -1,36 +1,329 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚖 Taxi Sables-d'Olonne - Site Web Professionnel
 
-## Getting Started
+Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, développé avec Next.js 15 et optimisé pour les moteurs de recherche et l'IA (GEO - Generative Engine Optimization).
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-15.4.4-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue?style=flat-square&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.11-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📋 Table des Matières
+
+- [🎯 Fonctionnalités](#-fonctionnalités)
+- [🛠️ Technologies](#️-technologies)
+- [📁 Structure du Projet](#-structure-du-projet)
+- [🚀 Installation](#-installation)
+- [💻 Développement](#-développement)
+- [📦 Scripts Disponibles](#-scripts-disponibles)
+- [🔧 Configuration](#-configuration)
+- [🌐 Déploiement](#-déploiement)
+- [📈 SEO et Optimisations](#-seo-et-optimisations)
+- [🤝 Contribution](#-contribution)
+- [📞 Contact](#-contact)
+
+## 🎯 Fonctionnalités
+
+### 🚕 Services de Transport
+
+- **Taxi urbain** - Service 24h/24 dans Les Sables-d'Olonne
+- **Transferts aéroport** - Liaison Nantes-Atlantique ↔ Sables-d'Olonne
+- **Transferts gare SNCF** - Transport depuis/vers la gare des Sables
+- **Transport médical VSL** - Véhicule Sanitaire Léger conventionné
+- **Courses longue distance** - Déplacements régionaux
+- **Réservation en ligne** - Système de réservation intégré
+
+### 🎨 Interface Utilisateur
+
+- **Design responsive** - Optimisé mobile, tablette, desktop
+- **Interface moderne** - Design épuré avec Tailwind CSS v4
+- **Accessibilité** - Respect des standards WCAG
+- **Performance** - Chargement rapide et optimisé
+
+### 📊 Optimisations SEO/GEO
+
+- **Schema.org** - Données structurées (TaxiService, LocalBusiness, FAQ)
+- **GEO optimisé** - Optimisation pour les moteurs de recherche IA
+- **Contenu E-E-A-T** - Expertise, Expérience, Autorité, Fiabilité
+- **Citations et sources** - Références officielles et statistiques
+- **FAQ structurées** - Questions-réponses optimisées
+
+## 🛠️ Technologies
+
+### Frontend
+
+- **[Next.js 15.4.4](https://nextjs.org/)** - Framework React avec App Router
+- **[React 19.1.0](https://reactjs.org/)** - Bibliothèque interface utilisateur
+- **[TypeScript 5](https://www.typescriptlang.org/)** - Typage statique JavaScript
+- **[Tailwind CSS 4.1.11](https://tailwindcss.com/)** - Framework CSS utilitaire
+
+### Outils de Développement
+
+- **[ESLint 9](https://eslint.org/)** - Linter JavaScript/TypeScript
+- **[Prettier 3.6.2](https://prettier.io/)** - Formateur de code
+- **[Lucide React](https://lucide.dev/)** - Icônes SVG
+- **[pnpm](https://pnpm.io/)** - Gestionnaire de paquets
+
+### Déploiement
+
+- **[Vercel](https://vercel.com/)** - Plateforme de déploiement recommandée
+- **GitHub Actions** - CI/CD automatisé
+
+## 📁 Structure du Projet
+
+```
+taxi-sables-olonne.fr_next/
+├── 📁 app/                          # App Router Next.js 15
+│   ├── 📄 page.tsx                  # Page d'accueil
+│   ├── 📄 layout.tsx                # Layout principal
+│   ├── 📄 globals.css               # Styles globaux Tailwind
+│   ├── 📄 sitemap.ts                # Génération sitemap
+│   ├── 📁 components/               # Composants réutilisables
+│   │   ├── 📄 Header.tsx            # Navigation principale
+│   │   ├── 📄 Footer.tsx            # Pied de page
+│   │   ├── 📄 CallToAction.tsx      # Boutons d'action
+│   │   ├── 📄 StructuredData.tsx    # Données structurées Schema.org
+│   │   └── 📄 SEOHead.tsx           # Métadonnées SEO
+│   ├── 📁 tarifs/                   # Page tarifs
+│   ├── 📁 reservation/              # Page réservation
+│   ├── 📁 contact/                  # Page contact
+│   ├── 📁 aeroport-nantes/          # Service aéroport
+│   ├── 📁 gare-sables-olonne/       # Service gare
+│   ├── 📁 longue-distance/          # Courses longue distance
+│   ├── 📁 transport-medical/        # VSL médical
+│   ├── 📁 guide-taxi-sables-olonne/ # Guide complet
+│   ├── 📁 avis-clients/             # Témoignages clients
+│   └── 📁 robots.txt/               # Robots.txt dynamique
+├── 📄 package.json                  # Dépendances et scripts
+├── 📄 tsconfig.json                 # Configuration TypeScript
+├── 📄 tailwind.config.ts            # Configuration Tailwind CSS
+├── 📄 next.config.ts                # Configuration Next.js
+├── 📄 postcss.config.mjs            # Configuration PostCSS
+├── 📄 eslint.config.mjs             # Configuration ESLint
+├── 📄 .prettierrc                   # Configuration Prettier
+├── 📄 .prettierignore               # Fichiers ignorés Prettier
+├── 📄 CLAUDE.md                     # Documentation développement IA
+└── 📄 README.md                     # Documentation projet
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prérequis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js** 18.17+ ou 20.0+
+- **pnpm** (recommandé) ou npm
+- **Git**
 
-## Learn More
+### Clone du Projet
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git clone https://github.com/Glad91/taxi-sables-olonne.fr_next.git
+cd taxi-sables-olonne.fr_next
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation des Dépendances
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Avec pnpm (recommandé)
+pnpm install
 
-## Deploy on Vercel
+# Avec npm
+npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💻 Développement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Démarrage du Serveur de Développement
+
+```bash
+# Avec pnpm
+pnpm dev
+
+# Avec npm
+npm run dev
+```
+
+Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
+
+### Mode de Développement
+
+- **Hot Reload** - Rechargement automatique
+- **Fast Refresh** - Préservation de l'état React
+- **TypeScript** - Vérification de types en temps réel
+- **Tailwind JIT** - Compilation CSS à la demande
+
+## 📦 Scripts Disponibles
+
+```bash
+# Développement
+pnpm dev              # Serveur de développement
+pnpm build            # Build de production
+pnpm start            # Serveur de production
+
+# Qualité de Code
+pnpm lint             # Vérification ESLint
+pnpm lint:fix         # Correction automatique ESLint
+pnpm format           # Formatage avec Prettier
+pnpm format:check     # Vérification formatage
+```
+
+## 🔧 Configuration
+
+### Variables d'Environnement
+
+Créer un fichier `.env.local` :
+
+```env
+# Configuration Next.js
+NEXT_PUBLIC_SITE_URL=https://taxi-sables-olonne.fr
+NEXT_PUBLIC_PHONE=0625193143
+NEXT_PUBLIC_EMAIL=contact@taxi-sables-olonne.fr
+
+# Analytics (optionnel)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+### Tailwind CSS v4
+
+Le projet utilise Tailwind CSS v4 avec configuration dans `globals.css` :
+
+```css
+@import 'tailwindcss';
+@theme {
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --color-taxi-yellow: #fbbf24;
+  --color-taxi-orange: #f97316;
+  --color-taxi-blue: #0ea5e9;
+}
+```
+
+### ESLint + Prettier
+
+Configuration automatique pour :
+
+- Formatage de code cohérent
+- Détection d'erreurs TypeScript
+- Règles Next.js optimisées
+- Intégration Prettier
+
+## 🌐 Déploiement
+
+### Déploiement Vercel (Recommandé)
+
+```bash
+# Installation Vercel CLI
+npm i -g vercel
+
+# Déploiement
+vercel
+
+# Production
+vercel --prod
+```
+
+### Déploiement Manuel
+
+```bash
+# Build de production
+pnpm build
+
+# Export statique (optionnel)
+pnpm export
+```
+
+### Variables d'Environnement Production
+
+Configurer sur votre plateforme :
+
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_PHONE`
+- `NEXT_PUBLIC_EMAIL`
+
+## 📈 SEO et Optimisations
+
+### Données Structurées Schema.org
+
+- **TaxiService** - Service de taxi
+- **LocalBusiness** - Entreprise locale
+- **FAQPage** - Questions fréquentes
+- **WebSite** - Site web principal
+
+### Optimisations GEO (Generative Engine Optimization)
+
+- **Citations sources** - Références officielles (+132% visibilité)
+- **Statistiques fiables** - Données vérifiées
+- **Contenu E-E-A-T** - Expertise et autorité
+- **Format Q&A** - Questions-réponses structurées
+- **Contexte géographique** - Sables-d'Olonne et région
+
+### Performance
+
+- **Core Web Vitals** optimisés
+- **Images optimisées** avec Next.js Image
+- **Lazy loading** automatique
+- **Bundle splitting** intelligent
+
+### Accessibilité
+
+- **Contraste couleurs** WCAG AA
+- **Navigation clavier** complète
+- **Aria labels** appropriés
+- **Sémantique HTML** correcte
+
+## 🤝 Contribution
+
+### Workflow de Développement
+
+1. **Fork** le projet
+2. **Créer** une branche feature (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. **Développer** avec les standards du projet
+4. **Tester** (`pnpm lint` + `pnpm format`)
+5. **Commit** avec messages clairs
+6. **Push** et créer une Pull Request
+
+### Standards de Code
+
+- **TypeScript strict** obligatoire
+- **Composants fonctionnels** avec hooks
+- **Tailwind CSS** pour les styles
+- **ESLint + Prettier** configurés
+- **Commits conventionnels** recommandés
+
+### Architecture
+
+- **App Router** Next.js 15
+- **Server Components** par défaut
+- **Client Components** uniquement si nécessaire
+- **Composants réutilisables** dans `/components`
+- **SEO-first** approche
+
+## 📞 Contact
+
+### Service Client
+
+- **📞 Téléphone** : [06 25 19 31 43](tel:0625193143)
+- **📍 Adresse** : Place Napoléon III, 85100 Les Sables-d'Olonne
+- **🌐 Site Web** : [taxi-sables-olonne.fr](https://taxi-sables-olonne.fr)
+
+### Développement
+
+- **👨‍💻 Développeur** : [GitHub Profile](https://github.com/Glad91)
+- **📧 Support Technique** : [Ouvrir une issue](https://github.com/Glad91/taxi-sables-olonne.fr_next/issues)
+- **🔄 Contributions** : [Pull Requests](https://github.com/Glad91/taxi-sables-olonne.fr_next/pulls)
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence privée. Tous droits réservés.
+
+**Taxi Sables-d'Olonne** © 2024 - Service de taxi professionnel aux Sables-d'Olonne
+
+---
+
+<div align="center">
+
+**🚖 Taxi Sables-d'Olonne - Votre transport fiable 24h/24**
+
+Développé avec ❤️ par [Claude Code](https://claude.ai/code)
+
+</div>
