@@ -1,28 +1,37 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import type { Metadata } from 'next'
+import './globals.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: {
     default: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24 Place Napoléon III",
-    template: "%s | Taxi Sables-d'Olonne"
+    template: "%s | Taxi Sables-d'Olonne",
   },
-  description: "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical. ☎️ 06 25 19 31 43",
-  keywords: ["taxi sables d'olonne", "chauffeur privé sables d'olonne", "transport sables d'olonne", "taxi place napoléon III", "VSL conventionné", "transfert aéroport nantes"],
+  description:
+    "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical. ☎️ 06 25 19 31 43",
+  keywords: [
+    "taxi sables d'olonne",
+    "chauffeur privé sables d'olonne",
+    "transport sables d'olonne",
+    'taxi place napoléon III',
+    'VSL conventionné',
+    'transfert aéroport nantes',
+  ],
   authors: [{ name: "Taxi Sables-d'Olonne" }],
   creator: "Taxi Sables-d'Olonne",
   publisher: "Taxi Sables-d'Olonne",
   openGraph: {
-    type: "website",
-    locale: "fr_FR",
-    url: "https://taxi-sables-olonne.fr",
+    type: 'website',
+    locale: 'fr_FR',
+    url: 'https://taxi-sables-olonne.fr',
     siteName: "Taxi Sables-d'Olonne",
     title: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24",
-    description: "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical.",
+    description:
+      "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical.",
     images: [
       {
-        url: "https://taxi-sables-olonne.fr/og-image.jpg",
+        url: 'https://taxi-sables-olonne.fr/og-image.jpg',
         width: 1200,
         height: 630,
         alt: "Taxi Sables-d'Olonne - Service de taxi professionnel",
@@ -30,10 +39,11 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24",
-    description: "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes.",
-    images: ["https://taxi-sables-olonne.fr/og-image.jpg"],
+    description:
+      "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes.",
+    images: ['https://taxi-sables-olonne.fr/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -41,23 +51,23 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   verification: {
-    google: "google-site-verification-code",
+    google: 'google-site-verification-code',
   },
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr",
+    canonical: 'https://taxi-sables-olonne.fr',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="fr">
@@ -70,11 +80,9 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
-  );
+  )
 }

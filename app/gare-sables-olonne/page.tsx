@@ -5,10 +5,16 @@ import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
   title: "Taxi Gare SNCF Sables-d'Olonne | Transfert rapide et ponctuel",
-  description: "Transfert taxi depuis/vers la gare SNCF des Sables-d'Olonne. Service rapide et ponctuel, disponible 24h/24. Tarif préférentiel à partir de 8€. ☎️ 06 25 19 31 43",
-  keywords: ["taxi gare sables d'olonne", "transfert gare SNCF", "taxi gare des sables", "transport gare"],
+  description:
+    "Transfert taxi depuis/vers la gare SNCF des Sables-d'Olonne. Service rapide et ponctuel, disponible 24h/24. Tarif préférentiel à partir de 8€. ☎️ 06 25 19 31 43",
+  keywords: [
+    "taxi gare sables d'olonne",
+    'transfert gare SNCF',
+    'taxi gare des sables',
+    'transport gare',
+  ],
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr/gare-sables-olonne",
+    canonical: 'https://taxi-sables-olonne.fr/gare-sables-olonne',
   },
 }
 
@@ -16,7 +22,7 @@ export default function GarePage() {
   return (
     <>
       <StructuredData type="TaxiService" />
-      
+
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -24,8 +30,9 @@ export default function GarePage() {
               Taxi Gare SNCF Sables-d'Olonne
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Transfert rapide et ponctuel depuis et vers la gare SNCF des Sables-d'Olonne. 
-              Service disponible pour tous vos trains, y compris les premiers et derniers départs.
+              Transfert rapide et ponctuel depuis et vers la gare SNCF des
+              Sables-d'Olonne. Service disponible pour tous vos trains, y
+              compris les premiers et derniers départs.
             </p>
             <CallToAction className="justify-center" />
           </div>
@@ -40,26 +47,33 @@ export default function GarePage() {
                 Service taxi gare SNCF des Sables-d'Olonne
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Notre service de taxi vous assure un transport fiable et ponctuel depuis et vers 
-                la gare SNCF des Sables-d'Olonne. Que vous arriviez en train ou que vous ayez un 
-                train à prendre, nous nous adaptons à vos horaires.
+                Notre service de taxi vous assure un transport fiable et
+                ponctuel depuis et vers la gare SNCF des Sables-d'Olonne. Que
+                vous arriviez en train ou que vous ayez un train à prendre, nous
+                nous adaptons à vos horaires.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Train className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-700">Prise en charge devant la gare</span>
+                  <span className="text-gray-700">
+                    Prise en charge devant la gare
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-700">Disponible pour tous les horaires de train</span>
+                  <span className="text-gray-700">
+                    Disponible pour tous les horaires de train
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-700">Desserte de toute la région sablaise</span>
+                  <span className="text-gray-700">
+                    Desserte de toute la région sablaise
+                  </span>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-50 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6">Tarifs gare SNCF</h3>
               <div className="space-y-4">
@@ -81,7 +95,8 @@ export default function GarePage() {
                 </div>
               </div>
               <p className="text-sm text-gray-600 mt-4">
-                Tarifs indicatifs TTC. Supplément possible pour bagages volumineux.
+                Tarifs indicatifs TTC. Supplément possible pour bagages
+                volumineux.
               </p>
             </div>
           </div>
@@ -101,10 +116,12 @@ export default function GarePage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Ponctualité garantie</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Ponctualité garantie
+              </h3>
               <p className="text-gray-600">
-                Nous connaissons les horaires de train et nous assurons d'être présents à temps 
-                pour votre arrivée ou votre départ.
+                Nous connaissons les horaires de train et nous assurons d'être
+                présents à temps pour votre arrivée ou votre départ.
               </p>
             </div>
 
@@ -112,10 +129,12 @@ export default function GarePage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Train className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Connaissance des horaires</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Connaissance des horaires
+              </h3>
               <p className="text-gray-600">
-                Service adapté aux horaires SNCF, y compris les premiers trains (dès 5h30) 
-                et les derniers trains (jusqu'à 23h).
+                Service adapté aux horaires SNCF, y compris les premiers trains
+                (dès 5h30) et les derniers trains (jusqu'à 23h).
               </p>
             </div>
 
@@ -123,10 +142,12 @@ export default function GarePage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Localisation optimale</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Localisation optimale
+              </h3>
               <p className="text-gray-600">
-                Basé Place Napoléon III, à proximité immédiate de la gare SNCF pour 
-                un service rapide et efficace.
+                Basé Place Napoléon III, à proximité immédiate de la gare SNCF
+                pour un service rapide et efficace.
               </p>
             </div>
           </div>
@@ -139,7 +160,8 @@ export default function GarePage() {
             Réservez votre transfert gare SNCF
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Appelez-nous pour réserver votre taxi ou pour un départ immédiat depuis la gare des Sables-d'Olonne.
+            Appelez-nous pour réserver votre taxi ou pour un départ immédiat
+            depuis la gare des Sables-d'Olonne.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
             <a

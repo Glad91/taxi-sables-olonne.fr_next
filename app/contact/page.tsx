@@ -5,10 +5,11 @@ import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
   title: "Contact | Taxi Sables-d'Olonne - 06 25 19 31 43",
-  description: "Contactez Taxi Sables-d'Olonne : ☎️ 06 25 19 31 43, 📧 contact@taxi-sables-olonne.fr, 📍 Place Napoléon III. Service 24h/24.",
-  keywords: ["contact taxi sables d'olonne", "téléphone taxi", "adresse taxi"],
+  description:
+    "Contactez Taxi Sables-d'Olonne : ☎️ 06 25 19 31 43, 📧 contact@taxi-sables-olonne.fr, 📍 Place Napoléon III. Service 24h/24.",
+  keywords: ["contact taxi sables d'olonne", 'téléphone taxi', 'adresse taxi'],
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr/contact",
+    canonical: 'https://taxi-sables-olonne.fr/contact',
   },
 }
 
@@ -16,7 +17,7 @@ export default function ContactPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
-      
+
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -24,8 +25,9 @@ export default function ContactPage() {
               Contactez-nous
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Une question ? Une réservation ? Contactez Taxi Sables-d&apos;Olonne 
-              par téléphone, email ou venez nous voir Place Napoléon III.
+              Une question ? Une réservation ? Contactez Taxi
+              Sables-d&apos;Olonne par téléphone, email ou venez nous voir Place
+              Napoléon III.
             </p>
             <CallToAction className="justify-center" />
           </div>
@@ -39,7 +41,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Nos coordonnées
               </h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-3 rounded-lg">
@@ -47,10 +49,15 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Téléphone</h3>
-                    <a href="tel:0625193143" className="text-blue-600 hover:text-blue-800 text-xl font-semibold">
+                    <a
+                      href="tel:0625193143"
+                      className="text-blue-600 hover:text-blue-800 text-xl font-semibold"
+                    >
                       06 25 19 31 43
                     </a>
-                    <p className="text-gray-600 mt-1">Disponible 24h/24 - 7j/7</p>
+                    <p className="text-gray-600 mt-1">
+                      Disponible 24h/24 - 7j/7
+                    </p>
                   </div>
                 </div>
 
@@ -60,7 +67,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Email</h3>
-                    <a href="mailto:contact@taxi-sables-olonne.fr" className="text-blue-600 hover:text-blue-800">
+                    <a
+                      href="mailto:contact@taxi-sables-olonne.fr"
+                      className="text-blue-600 hover:text-blue-800"
+                    >
                       contact@taxi-sables-olonne.fr
                     </a>
                     <p className="text-gray-600 mt-1">Réponse sous 24h</p>
@@ -74,11 +84,13 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Adresse</h3>
                     <p className="text-gray-700">
-                      Place Napoléon III<br />
-                      85100 Les Sables-d&apos;Olonne<br />
+                      Place Napoléon III
+                      <br />
+                      85100 Les Sables-d&apos;Olonne
+                      <br />
                       Vendée, France
                     </p>
-                    <a 
+                    <a
                       href="https://maps.google.com/maps?daddr=Place+Napol%C3%A9on+III,+85100+Les+Sables-d'Olonne"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -96,8 +108,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Horaires</h3>
                     <p className="text-gray-700">
-                      <strong>Service disponible :</strong><br />
-                      24 heures sur 24<br />
+                      <strong>Service disponible :</strong>
+                      <br />
+                      24 heures sur 24
+                      <br />
                       7 jours sur 7<br />
                       Jours fériés inclus
                     </p>
@@ -107,11 +121,15 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h2 className="text-2xl font-semibold mb-6">Zone d&apos;intervention</h2>
-              
+              <h2 className="text-2xl font-semibold mb-6">
+                Zone d&apos;intervention
+              </h2>
+
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">Sables-d&apos;Olonne et communes</h3>
+                  <h3 className="text-lg font-semibold mb-3">
+                    Sables-d&apos;Olonne et communes
+                  </h3>
                   <ul className="grid grid-cols-2 gap-2 text-gray-600">
                     <li>• Les Sables-d&apos;Olonne</li>
                     <li>• Olonne-sur-Mer</li>
@@ -123,7 +141,9 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">Destinations fréquentes</h3>
+                  <h3 className="text-lg font-semibold mb-3">
+                    Destinations fréquentes
+                  </h3>
                   <ul className="space-y-1 text-gray-600">
                     <li>• Gare SNCF des Sables-d&apos;Olonne</li>
                     <li>• Aéroport Nantes Atlantique</li>
@@ -135,11 +155,14 @@ export default function ContactPage() {
                 </div>
 
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-900 mb-2">Urgences et réservations</h4>
+                  <h4 className="font-semibold text-blue-900 mb-2">
+                    Urgences et réservations
+                  </h4>
                   <p className="text-blue-800 text-sm">
-                    Pour un départ immédiat ou une réservation, appelez directement au 
-                    <strong> 06 25 19 31 43</strong>. Nous sommes disponibles 24h/24 
-                    pour répondre à vos besoins de transport.
+                    Pour un départ immédiat ou une réservation, appelez
+                    directement au
+                    <strong> 06 25 19 31 43</strong>. Nous sommes disponibles
+                    24h/24 pour répondre à vos besoins de transport.
                   </p>
                 </div>
               </div>
@@ -155,7 +178,8 @@ export default function ContactPage() {
               Localisation
             </h2>
             <p className="text-lg text-gray-600">
-              Nous sommes situés au cœur des Sables-d&apos;Olonne, Place Napoléon III
+              Nous sommes situés au cœur des Sables-d&apos;Olonne, Place
+              Napoléon III
             </p>
           </div>
 

@@ -1,14 +1,30 @@
 import { Metadata } from 'next'
-import { Clock, Phone, MapPin, Euro, Car, Shield, CheckCircle, Star, CreditCard } from 'lucide-react'
+import {
+  Clock,
+  Phone,
+  MapPin,
+  Euro,
+  Car,
+  Shield,
+  CreditCard,
+} from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
-  title: "Guide complet du taxi aux Sables-d'Olonne 2024 | Tarifs, horaires, réservation",
-  description: "Guide pratique complet pour prendre un taxi aux Sables-d'Olonne : tarifs officiels 2024, délais, paiement CB, transport médical VSL. Toutes les réponses à vos questions.",
-  keywords: ["guide taxi sables d'olonne", "tarif taxi sables d'olonne 2024", "réserver taxi sables d'olonne", "transport médical VSL vendée", "taxi aéroport nantes sables d'olonne"],
+  title:
+    "Guide complet du taxi aux Sables-d'Olonne 2024 | Tarifs, horaires, réservation",
+  description:
+    "Guide pratique complet pour prendre un taxi aux Sables-d'Olonne : tarifs officiels 2024, délais, paiement CB, transport médical VSL. Toutes les réponses à vos questions.",
+  keywords: [
+    "guide taxi sables d'olonne",
+    "tarif taxi sables d'olonne 2024",
+    "réserver taxi sables d'olonne",
+    'transport médical VSL vendée',
+    "taxi aéroport nantes sables d'olonne",
+  ],
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr/guide-taxi-sables-olonne",
+    canonical: 'https://taxi-sables-olonne.fr/guide-taxi-sables-olonne',
   },
 }
 
@@ -16,7 +32,7 @@ export default function GuideTaxiPage() {
   return (
     <>
       <StructuredData type="FAQ" />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,8 +41,9 @@ export default function GuideTaxiPage() {
               Guide taxi Sables-d'Olonne
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-              Tout ce que vous devez savoir pour utiliser les services de taxi aux Sables-d'Olonne. 
-              Tarifs officiels, délais, réservation, transport médical VSL.
+              Tout ce que vous devez savoir pour utiliser les services de taxi
+              aux Sables-d'Olonne. Tarifs officiels, délais, réservation,
+              transport médical VSL.
             </p>
             <CallToAction className="justify-center" />
           </div>
@@ -42,27 +59,36 @@ export default function GuideTaxiPage() {
                 Guide pratique du taxi aux Sables-d'Olonne
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Service de taxi professionnel disponible 24h/24 et 7j/7. Notre guide vous explique 
-                tout ce que vous devez savoir : tarifs, délais, réservation et transport médical.
+                Service de taxi professionnel disponible 24h/24 et 7j/7. Notre
+                guide vous explique tout ce que vous devez savoir : tarifs,
+                délais, réservation et transport médical.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Euro className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-700">Tarifs réglementaires transparents</span>
+                  <span className="text-gray-700">
+                    Tarifs réglementaires transparents
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-700">Intervention moyenne en 8 minutes</span>
+                  <span className="text-gray-700">
+                    Intervention moyenne en 8 minutes
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Shield className="h-6 w-6 text-blue-600" />
-                  <span className="text-gray-700">VSL conventionné Sécurité Sociale</span>
+                  <span className="text-gray-700">
+                    VSL conventionné Sécurité Sociale
+                  </span>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6">Informations essentielles</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Informations essentielles
+              </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Prise en charge</span>
@@ -97,7 +123,8 @@ export default function GuideTaxiPage() {
               Questions fréquentes
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Les réponses aux questions les plus posées sur notre service de taxi
+              Les réponses aux questions les plus posées sur notre service de
+              taxi
             </p>
           </div>
 
@@ -106,10 +133,13 @@ export default function GuideTaxiPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Euro className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Quels sont les tarifs ?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Quels sont les tarifs ?
+              </h3>
               <p className="text-gray-600">
-                Tarifs réglementaires : 4,20€ de prise en charge + 1,86€/km en journée. 
-                Supplément nuit/dimanche. Tous nos tarifs suivent l'arrêté préfectoral.
+                Tarifs réglementaires : 4,20€ de prise en charge + 1,86€/km en
+                journée. Supplément nuit/dimanche. Tous nos tarifs suivent
+                l'arrêté préfectoral.
               </p>
             </div>
 
@@ -117,9 +147,11 @@ export default function GuideTaxiPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Délai d'intervention ?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Délai d'intervention ?
+              </h3>
               <p className="text-gray-600">
-                8 minutes en moyenne dans le centre-ville des Sables-d'Olonne. 
+                8 minutes en moyenne dans le centre-ville des Sables-d'Olonne.
                 Service disponible 24h/24 et 7j/7 toute l'année.
               </p>
             </div>
@@ -128,10 +160,12 @@ export default function GuideTaxiPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CreditCard className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Moyens de paiement ?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Moyens de paiement ?
+              </h3>
               <p className="text-gray-600">
-                Nous acceptons les espèces, carte bancaire sans contact et chèques. 
-                Terminal de paiement disponible dans le véhicule.
+                Nous acceptons les espèces, carte bancaire sans contact et
+                chèques. Terminal de paiement disponible dans le véhicule.
               </p>
             </div>
           </div>
@@ -155,10 +189,12 @@ export default function GuideTaxiPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Car className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Transferts gare & aéroport</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Transferts gare & aéroport
+              </h3>
               <p className="text-gray-600">
-                Transport ponctuel vers la gare SNCF des Sables-d'Olonne et l'aéroport de Nantes. 
-                Suivi des horaires de train et de vol.
+                Transport ponctuel vers la gare SNCF des Sables-d'Olonne et
+                l'aéroport de Nantes. Suivi des horaires de train et de vol.
               </p>
             </div>
 
@@ -166,10 +202,13 @@ export default function GuideTaxiPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Transport médical VSL</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Transport médical VSL
+              </h3>
               <p className="text-gray-600">
-                Véhicule Sanitaire Léger conventionné Sécurité Sociale. Transport assis pour 
-                vos rendez-vous médicaux avec remboursement.
+                Véhicule Sanitaire Léger conventionné Sécurité Sociale.
+                Transport assis pour vos rendez-vous médicaux avec
+                remboursement.
               </p>
             </div>
 
@@ -177,9 +216,11 @@ export default function GuideTaxiPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Courses longue distance</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Courses longue distance
+              </h3>
               <p className="text-gray-600">
-                Déplacements vers La Roche-sur-Yon, Nantes, et toute la région. 
+                Déplacements vers La Roche-sur-Yon, Nantes, et toute la région.
                 Tarifs préférentiels pour les trajets longue distance.
               </p>
             </div>
@@ -194,8 +235,8 @@ export default function GuideTaxiPage() {
             Réservez votre taxi aux Sables-d'Olonne
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Service professionnel disponible 24h/24. Réservation immédiate par téléphone. 
-            Tarifs transparents selon la réglementation préfectorale.
+            Service professionnel disponible 24h/24. Réservation immédiate par
+            téléphone. Tarifs transparents selon la réglementation préfectorale.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
             <a
@@ -206,7 +247,8 @@ export default function GuideTaxiPage() {
               <span>06 25 19 31 43</span>
             </a>
             <p className="text-blue-100">
-              Guide mis à jour en 2024 • Sources officielles • 15+ années d'expérience
+              Guide mis à jour en 2024 • Sources officielles • 15+ années
+              d'expérience
             </p>
           </div>
         </div>

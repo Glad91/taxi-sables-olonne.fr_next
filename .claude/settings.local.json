@@ -11,7 +11,10 @@
       "Bash(pnpm remove:*)",
       "Bash(pnpm add:*)",
       "Bash(rm:*)",
-      "Bash(pnpm build:*)"
+      "Bash(pnpm build:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git push:*)",
+      "Bash(pnpm run:*)"
     ],
     "deny": []
   }

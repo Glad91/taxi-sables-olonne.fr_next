@@ -5,10 +5,16 @@ import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
   title: "Taxi Aéroport Nantes Atlantique | Transfert Sables-d'Olonne",
-  description: "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, ponctuel et confortable. Tarif fixe 120€. ☎️ 06 25 19 31 43",
-  keywords: ["taxi aéroport nantes", "transfert aéroport nantes atlantique", "taxi sables d'olonne nantes", "navette aéroport"],
+  description:
+    "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, ponctuel et confortable. Tarif fixe 120€. ☎️ 06 25 19 31 43",
+  keywords: [
+    'taxi aéroport nantes',
+    'transfert aéroport nantes atlantique',
+    "taxi sables d'olonne nantes",
+    'navette aéroport',
+  ],
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr/aeroport-nantes",
+    canonical: 'https://taxi-sables-olonne.fr/aeroport-nantes',
   },
 }
 
@@ -16,7 +22,7 @@ export default function AeroportPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
-      
+
       <section className="bg-gradient-to-br from-sky-600 to-sky-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -24,8 +30,9 @@ export default function AeroportPage() {
               Taxi Aéroport Nantes Atlantique
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Transfert confortable et ponctuel entre Les Sables-d'Olonne et l'aéroport Nantes Atlantique. 
-              Service avec suivi de vol pour vos arrivées et départs.
+              Transfert confortable et ponctuel entre Les Sables-d'Olonne et
+              l'aéroport Nantes Atlantique. Service avec suivi de vol pour vos
+              arrivées et départs.
             </p>
             <CallToAction className="justify-center" />
           </div>
@@ -40,51 +47,68 @@ export default function AeroportPage() {
                 Transfert Sables-d'Olonne ↔ Aéroport Nantes
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Notre service de taxi vous propose un transfert direct et confortable entre 
-                Les Sables-d'Olonne et l'aéroport Nantes Atlantique. Nous surveillons vos vols 
-                pour nous adapter aux éventuels retards ou avances.
+                Notre service de taxi vous propose un transfert direct et
+                confortable entre Les Sables-d'Olonne et l'aéroport Nantes
+                Atlantique. Nous surveillons vos vols pour nous adapter aux
+                éventuels retards ou avances.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Plane className="h-6 w-6 text-sky-600" />
-                  <span className="text-gray-700">Suivi de vol en temps réel</span>
+                  <span className="text-gray-700">
+                    Suivi de vol en temps réel
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="h-6 w-6 text-sky-600" />
-                  <span className="text-gray-700">Ponctualité garantie pour vos vols</span>
+                  <span className="text-gray-700">
+                    Ponctualité garantie pour vos vols
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Car className="h-6 w-6 text-sky-600" />
-                  <span className="text-gray-700">Véhicule confortable avec climatisation</span>
+                  <span className="text-gray-700">
+                    Véhicule confortable avec climatisation
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-6 w-6 text-sky-600" />
-                  <span className="text-gray-700">Prise en charge à domicile ou hôtel</span>
+                  <span className="text-gray-700">
+                    Prise en charge à domicile ou hôtel
+                  </span>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6">Tarifs aéroport Nantes</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Tarifs aéroport Nantes
+              </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <div>
                     <div className="font-semibold">Trajet simple</div>
-                    <div className="text-sm text-gray-600">Sables-d'Olonne ↔ Aéroport</div>
+                    <div className="text-sm text-gray-600">
+                      Sables-d'Olonne ↔ Aéroport
+                    </div>
                   </div>
                   <span className="font-bold text-sky-600 text-xl">120€</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <div>
                     <div className="font-semibold">Aller-retour</div>
-                    <div className="text-sm text-gray-600">Réservé le même jour</div>
+                    <div className="text-sm text-gray-600">
+                      Réservé le même jour
+                    </div>
                   </div>
                   <span className="font-bold text-sky-600 text-xl">220€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
                     <div className="font-semibold">Attente aéroport</div>
-                    <div className="text-sm text-gray-600">Supplément par heure</div>
+                    <div className="text-sm text-gray-600">
+                      Supplément par heure
+                    </div>
                   </div>
                   <span className="font-bold text-sky-600 text-xl">25€</span>
                 </div>
@@ -112,8 +136,8 @@ export default function AeroportPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Suivi de vol</h3>
               <p className="text-gray-600">
-                Nous surveillons votre vol en temps réel pour nous adapter aux retards 
-                ou avances et être présents au bon moment.
+                Nous surveillons votre vol en temps réel pour nous adapter aux
+                retards ou avances et être présents au bon moment.
               </p>
             </div>
 
@@ -123,8 +147,8 @@ export default function AeroportPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Ponctualité</h3>
               <p className="text-gray-600">
-                Départ anticipé pour tenir compte du trafic et vous assurer d'arriver 
-                à l'heure pour l'enregistrement de votre vol.
+                Départ anticipé pour tenir compte du trafic et vous assurer
+                d'arriver à l'heure pour l'enregistrement de votre vol.
               </p>
             </div>
 
@@ -134,8 +158,8 @@ export default function AeroportPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Confort</h3>
               <p className="text-gray-600">
-                Véhicule spacieux et confortable pour vos bagages et votre trajet 
-                de 1h15 environ vers l'aéroport Nantes Atlantique.
+                Véhicule spacieux et confortable pour vos bagages et votre
+                trajet de 1h15 environ vers l'aéroport Nantes Atlantique.
               </p>
             </div>
           </div>
@@ -150,12 +174,23 @@ export default function AeroportPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4">Durée et distance</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Durée et distance
+                </h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• <strong>Distance :</strong> 95 km environ</li>
-                  <li>• <strong>Durée :</strong> 1h15 en moyenne</li>
-                  <li>• <strong>Autoroute :</strong> A87 puis rocade nantaise</li>
-                  <li>• <strong>Stationnement :</strong> Dépose directe aux terminaux</li>
+                  <li>
+                    • <strong>Distance :</strong> 95 km environ
+                  </li>
+                  <li>
+                    • <strong>Durée :</strong> 1h15 en moyenne
+                  </li>
+                  <li>
+                    • <strong>Autoroute :</strong> A87 puis rocade nantaise
+                  </li>
+                  <li>
+                    • <strong>Stationnement :</strong> Dépose directe aux
+                    terminaux
+                  </li>
                 </ul>
               </div>
               <div>
@@ -178,8 +213,8 @@ export default function AeroportPage() {
             Réservez votre transfert aéroport
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contactez-nous pour réserver votre transfert vers l'aéroport Nantes Atlantique. 
-            Tarif fixe et service garanti !
+            Contactez-nous pour réserver votre transfert vers l'aéroport Nantes
+            Atlantique. Tarif fixe et service garanti !
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
             <a

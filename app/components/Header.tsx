@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Phone, MapPin, Menu, X } from 'lucide-react'
+import { Phone, Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,14 +29,16 @@ export default function Header() {
                 🚕
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Taxi Sables-d'Olonne</h1>
+                <h1 className="text-xl font-bold text-gray-900">
+                  Taxi Sables-d'Olonne
+                </h1>
                 <p className="text-sm text-gray-600">Service 24h/24 - 7j/7</p>
               </div>
             </Link>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navigation.map(item => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -68,7 +70,11 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-gray-900"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -76,7 +82,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mb-4">
-              {navigation.map((item) => (
+              {navigation.map(item => (
                 <Link
                   key={item.name}
                   href={item.href}

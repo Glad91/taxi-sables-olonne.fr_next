@@ -7,10 +7,10 @@ interface CallToActionProps {
   className?: string
 }
 
-export default function CallToAction({ 
-  showReservation = true, 
-  showItinerary = true, 
-  className = "" 
+export default function CallToAction({
+  showReservation = true,
+  showItinerary = true,
+  className = '',
 }: CallToActionProps) {
   return (
     <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
@@ -21,7 +21,7 @@ export default function CallToAction({
         <Phone className="h-5 w-5" />
         <span>Appeler maintenant</span>
       </a>
-      
+
       {showItinerary && (
         <a
           href="https://maps.google.com/maps?daddr=Place+Napol%C3%A9on+III,+85100+Les+Sables-d'Olonne"
@@ -33,7 +33,7 @@ export default function CallToAction({
           <span>Itinéraire</span>
         </a>
       )}
-      
+
       {showReservation && (
         <Link
           href="/reservation"

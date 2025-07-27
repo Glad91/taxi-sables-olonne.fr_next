@@ -1,14 +1,20 @@
 import { Metadata } from 'next'
-import { Euro, Clock, MapPin, Phone } from 'lucide-react'
+import { Euro, MapPin, Phone } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
   title: "Tarifs taxi Sables-d'Olonne | Prix transparents et compétitifs",
-  description: "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, aéroport Nantes 120€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
-  keywords: ["tarifs taxi sables d'olonne", "prix taxi", "tarif gare SNCF", "tarif aéroport nantes"],
+  description:
+    "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, aéroport Nantes 120€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
+  keywords: [
+    "tarifs taxi sables d'olonne",
+    'prix taxi',
+    'tarif gare SNCF',
+    'tarif aéroport nantes',
+  ],
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr/tarifs",
+    canonical: 'https://taxi-sables-olonne.fr/tarifs',
   },
 }
 
@@ -16,7 +22,7 @@ export default function TarifsPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
-      
+
       <section className="bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -24,8 +30,9 @@ export default function TarifsPage() {
               Tarifs taxi Sables-d&apos;Olonne
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Découvrez nos tarifs transparents et compétitifs pour tous vos déplacements 
-              aux Sables-d&apos;Olonne et alentours. Prix fixes garantis !
+              Découvrez nos tarifs transparents et compétitifs pour tous vos
+              déplacements aux Sables-d&apos;Olonne et alentours. Prix fixes
+              garantis !
             </p>
             <CallToAction className="justify-center" />
           </div>
@@ -120,9 +127,12 @@ export default function TarifsPage() {
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Euro className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-green-800">100% pris en charge</h3>
+              <h3 className="text-xl font-semibold mb-3 text-green-800">
+                100% pris en charge
+              </h3>
               <p className="text-green-700">
-                Transport médical sur prescription avec ALD (Affection Longue Durée)
+                Transport médical sur prescription avec ALD (Affection Longue
+                Durée)
               </p>
             </div>
 
@@ -130,9 +140,12 @@ export default function TarifsPage() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Euro className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-blue-800">65% remboursé</h3>
+              <h3 className="text-xl font-semibold mb-3 text-blue-800">
+                65% remboursé
+              </h3>
               <p className="text-blue-700">
-                Prise en charge partielle par la Sécurité Sociale sur prescription
+                Prise en charge partielle par la Sécurité Sociale sur
+                prescription
               </p>
             </div>
 
@@ -140,7 +153,9 @@ export default function TarifsPage() {
               <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Euro className="h-8 w-8 text-yellow-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-yellow-800">Mutuelle</h3>
+              <h3 className="text-xl font-semibold mb-3 text-yellow-800">
+                Mutuelle
+              </h3>
               <p className="text-yellow-700">
                 Complément pris en charge selon votre contrat mutuelle
               </p>
@@ -157,7 +172,9 @@ export default function TarifsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4">Tarifs et suppléments</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Tarifs et suppléments
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Tous nos tarifs sont TTC</li>
                   <li>• Supplément nuit (22h-6h) : +25%</li>
@@ -167,7 +184,9 @@ export default function TarifsPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-4">Modes de paiement</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Modes de paiement
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Espèces</li>
                   <li>• Carte bancaire (sans frais)</li>
@@ -187,7 +206,7 @@ export default function TarifsPage() {
             Devis gratuit personnalisé
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contactez-nous pour obtenir un devis gratuit adapté à votre trajet. 
+            Contactez-nous pour obtenir un devis gratuit adapté à votre trajet.
             Tarifs transparents et sans surprise !
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
@@ -198,9 +217,7 @@ export default function TarifsPage() {
               <Phone className="h-6 w-6" />
               <span>06 25 19 31 43</span>
             </a>
-            <p className="text-green-100">
-              Devis sous 2h maximum
-            </p>
+            <p className="text-green-100">Devis sous 2h maximum</p>
           </div>
         </div>
       </section>

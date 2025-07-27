@@ -4,11 +4,18 @@ import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
-  title: "Taxi longue distance | Sables-d'Olonne vers Nantes, La Roche, Bordeaux",
-  description: "Service taxi longue distance depuis Les Sables-d'Olonne vers Nantes, La Roche-sur-Yon, Bordeaux et toute la France. Devis gratuit. ☎️ 06 25 19 31 43",
-  keywords: ["taxi longue distance", "taxi sables d'olonne nantes", "transport longue distance", "taxi bordeaux"],
+  title:
+    "Taxi longue distance | Sables-d'Olonne vers Nantes, La Roche, Bordeaux",
+  description:
+    "Service taxi longue distance depuis Les Sables-d'Olonne vers Nantes, La Roche-sur-Yon, Bordeaux et toute la France. Devis gratuit. ☎️ 06 25 19 31 43",
+  keywords: [
+    'taxi longue distance',
+    "taxi sables d'olonne nantes",
+    'transport longue distance',
+    'taxi bordeaux',
+  ],
   alternates: {
-    canonical: "https://taxi-sables-olonne.fr/longue-distance",
+    canonical: 'https://taxi-sables-olonne.fr/longue-distance',
   },
 }
 
@@ -16,7 +23,7 @@ export default function LongueDistancePage() {
   return (
     <>
       <StructuredData type="TaxiService" />
-      
+
       <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -24,8 +31,9 @@ export default function LongueDistancePage() {
               Taxi longue distance
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Service de taxi longue distance depuis Les Sables-d'Olonne vers Nantes, 
-              La Roche-sur-Yon, Bordeaux et toute la France. Devis gratuit sur demande.
+              Service de taxi longue distance depuis Les Sables-d'Olonne vers
+              Nantes, La Roche-sur-Yon, Bordeaux et toute la France. Devis
+              gratuit sur demande.
             </p>
             <CallToAction className="justify-center" />
           </div>
@@ -40,9 +48,10 @@ export default function LongueDistancePage() {
                 Destinations longue distance
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Notre service de taxi vous emmène dans toute la France pour vos déplacements 
-                professionnels ou personnels. Confort, ponctualité et tarifs compétitifs garantis 
-                pour tous vos trajets longue distance.
+                Notre service de taxi vous emmène dans toute la France pour vos
+                déplacements professionnels ou personnels. Confort, ponctualité
+                et tarifs compétitifs garantis pour tous vos trajets longue
+                distance.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -55,37 +64,52 @@ export default function LongueDistancePage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Calculator className="h-6 w-6 text-purple-600" />
-                  <span className="text-gray-700">Devis gratuit et personnalisé</span>
+                  <span className="text-gray-700">
+                    Devis gratuit et personnalisé
+                  </span>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6">Destinations populaires</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Destinations populaires
+              </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Nantes</span>
-                  <span className="font-semibold text-purple-600">À partir de 85€</span>
+                  <span className="font-semibold text-purple-600">
+                    À partir de 85€
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>La Roche-sur-Yon</span>
-                  <span className="font-semibold text-purple-600">À partir de 45€</span>
+                  <span className="font-semibold text-purple-600">
+                    À partir de 45€
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Bordeaux</span>
-                  <span className="font-semibold text-purple-600">À partir de 280€</span>
+                  <span className="font-semibold text-purple-600">
+                    À partir de 280€
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Paris</span>
-                  <span className="font-semibold text-purple-600">Sur devis</span>
+                  <span className="font-semibold text-purple-600">
+                    Sur devis
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Lyon</span>
-                  <span className="font-semibold text-purple-600">Sur devis</span>
+                  <span className="font-semibold text-purple-600">
+                    Sur devis
+                  </span>
                 </div>
               </div>
               <p className="text-sm text-gray-600 mt-4">
-                Tarifs indicatifs TTC. Devis personnalisé selon votre destination.
+                Tarifs indicatifs TTC. Devis personnalisé selon votre
+                destination.
               </p>
             </div>
           </div>
@@ -102,7 +126,9 @@ export default function LongueDistancePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Région Pays de la Loire</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Région Pays de la Loire
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li>• Nantes (85 km - 1h)</li>
                 <li>• La Roche-sur-Yon (35 km - 40min)</li>
@@ -145,7 +171,9 @@ export default function LongueDistancePage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4">Confort et sécurité</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Confort et sécurité
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Véhicule récent et spacieux</li>
                   <li>• Climatisation et confort optimal</li>
@@ -154,7 +182,9 @@ export default function LongueDistancePage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-4">Service personnalisé</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Service personnalisé
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Devis gratuit sous 2h</li>
                   <li>• Tarif fixe négocié à l'avance</li>
@@ -173,7 +203,8 @@ export default function LongueDistancePage() {
             Demandez votre devis longue distance
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contactez-nous pour obtenir un devis gratuit et personnalisé pour votre trajet longue distance.
+            Contactez-nous pour obtenir un devis gratuit et personnalisé pour
+            votre trajet longue distance.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
             <a
@@ -183,9 +214,7 @@ export default function LongueDistancePage() {
               <Phone className="h-6 w-6" />
               <span>06 25 19 31 43</span>
             </a>
-            <p className="text-purple-100">
-              Devis gratuit sous 2h maximum
-            </p>
+            <p className="text-purple-100">Devis gratuit sous 2h maximum</p>
           </div>
         </div>
       </section>

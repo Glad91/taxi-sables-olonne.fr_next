@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a Next.js 15 taxi service website for "Taxi Sables-d'Olonne" using:
+
 - **Framework**: Next.js 15.4.4 with App Router
 - **Styling**: Tailwind CSS v4 with custom taxi color palette
 - **Icons**: Lucide React
@@ -54,29 +55,35 @@ app/
 ## Key Architecture Patterns
 
 ### SEO-First Approach
+
 - Comprehensive metadata in `layout.tsx` and individual pages
 - Structured data components for rich snippets
 - Geo-location meta tags for local SEO
 - Canonical URLs and Open Graph tags
 
 ### Component Structure
+
 - **Header**: Responsive navigation with mobile hamburger menu, phone CTA, and reservation button
 - **CallToAction**: Reusable component for phone calls and reservation links
 - **StructuredData**: JSON-LD schema markup for search engines
 
 ### Styling System
+
 Custom Tailwind configuration with taxi-specific colors:
+
 - `taxi-yellow`: #fbbf24 (primary brand color)
 - `taxi-orange`: #f97316 (hover states)
 - `taxi-blue`: #0ea5e9 (accent)
 - `primary`: Blue color scale (600: #2563eb, 800: #1e40af)
 
 ### Configuration Notes
+
 - ESLint and TypeScript errors are ignored during builds (`ignoreDuringBuilds: true`)
 - Uses Turbopack for faster development builds
 - Tailwind CSS v4 with PostCSS integration
 
 ### Page Types
+
 1. **Service Pages**: Follow pattern of hero section + detailed content + CTA
 2. **Contact Forms**: Located in `/contact` and `/reservation`
 3. **SEO Pages**: Optimized for local search terms and taxi services
