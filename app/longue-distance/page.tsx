@@ -79,7 +79,7 @@ export default function LongueDistancePage() {
                 <div className="flex justify-between items-center">
                   <span>Nantes</span>
                   <span className="font-semibold text-purple-600">
-                    À partir de 85€
+                    À partir de 100€
                   </span>
                 </div>
                 <div className="flex justify-between items-center">

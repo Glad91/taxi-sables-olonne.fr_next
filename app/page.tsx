@@ -235,7 +235,7 @@ export default function Home() {
                   <strong>R :</strong> Nos tarifs suivent la réglementation
                   préfectorale. Selon l'INSEE 2024, le tarif moyen d'un taxi en
                   Vendée est de 2,30€ du kilomètre. Nous pratiquons des tarifs
-                  transparents : prise en charge 4,20€ + 1,86€/km en journée.
+                  transparents : prise en charge 2,90€ + 2,16€/km en journée.
                 </p>
                 <p className="text-sm text-gray-500">
                   Source : Arrêté préfectoral Vendée 2024 - Tarification taxi

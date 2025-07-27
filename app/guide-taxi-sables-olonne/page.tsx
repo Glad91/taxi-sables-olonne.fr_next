@@ -92,11 +92,15 @@ export default function GuideTaxiPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Prise en charge</span>
-                  <span className="font-semibold text-blue-600">4,20€</span>
+                  <span className="font-semibold text-blue-600">2,90€</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>Prix au kilomètre</span>
-                  <span className="font-semibold text-blue-600">1,86€</span>
+                  <span>Prix au kilomètre (jour)</span>
+                  <span className="font-semibold text-blue-600">2,16€</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Prix au kilomètre (nuit)</span>
+                  <span className="font-semibold text-blue-600">3,24€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Délai d'intervention</span>
@@ -137,8 +141,8 @@ export default function GuideTaxiPage() {
                 Quels sont les tarifs ?
               </h3>
               <p className="text-gray-600">
-                Tarifs réglementaires : 4,20€ de prise en charge + 1,86€/km en
-                journée. Supplément nuit/dimanche. Tous nos tarifs suivent
+                Tarifs réglementaires : 2,90€ de prise en charge + 2,16€/km en
+                journée, 3,24€/km la nuit et dimanche. Tous nos tarifs suivent
                 l'arrêté préfectoral.
               </p>
             </div>

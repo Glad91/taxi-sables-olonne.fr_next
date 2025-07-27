@@ -6,7 +6,7 @@ import StructuredData from '../components/StructuredData'
 export const metadata: Metadata = {
   title: "Tarifs taxi Sables-d'Olonne | Prix transparents et compétitifs",
   description:
-    "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, aéroport Nantes 120€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
+    "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, gare Nantes 240€, aéroport Nantes 140€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
   keywords: [
     "tarifs taxi sables d'olonne",
     'prix taxi',
@@ -82,12 +82,20 @@ export default function TarifsPage() {
               </h2>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b pb-2">
+                  <span>Gare de Nantes (jour)</span>
+                  <span className="font-bold text-blue-600">240€</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-2">
+                  <span>Gare de Nantes (nuit/dimanche)</span>
+                  <span className="font-bold text-blue-600">360€</span>
+                </div>
+                <div className="flex justify-between items-center border-b pb-2">
                   <span>Aéroport Nantes Atlantique</span>
-                  <span className="font-bold text-blue-600">120€</span>
+                  <span className="font-bold text-blue-600">140€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
                   <span>Nantes centre</span>
-                  <span className="font-bold text-blue-600">85€</span>
+                  <span className="font-bold text-blue-600">100€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
                   <span>La Roche-sur-Yon</span>
@@ -176,9 +184,10 @@ export default function TarifsPage() {
                   Tarifs et suppléments
                 </h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• Tous nos tarifs sont TTC</li>
-                  <li>• Supplément nuit (22h-6h) : +25%</li>
-                  <li>• Supplément dimanche et jours fériés : +25%</li>
+                  <li>• Prise en charge : 2,90€</li>
+                  <li>• Tarif jour (6h-22h) : 2,16€/km</li>
+                  <li>• Tarif nuit (22h-6h) : 3,24€/km</li>
+                  <li>• Dimanche et jours fériés : 3,24€/km</li>
                   <li>• Bagages volumineux : 2€ par bagage</li>
                   <li>• Attente : 25€/heure</li>
                 </ul>

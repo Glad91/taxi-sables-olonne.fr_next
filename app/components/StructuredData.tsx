@@ -125,7 +125,7 @@ export default function StructuredData({
         name: "Combien coûte un taxi aux Sables-d'Olonne ?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Nos tarifs suivent la réglementation préfectorale. Selon l'INSEE 2024, le tarif moyen d'un taxi en Vendée est de 2,30€ du kilomètre. Nous pratiquons des tarifs transparents : prise en charge 4,20€ + 1,86€/km en journée.",
+          text: "Nos tarifs suivent la réglementation préfectorale. Selon l'INSEE 2024, le tarif moyen d'un taxi en Vendée est de 2,30€ du kilomètre. Nous pratiquons des tarifs transparents : prise en charge 2,90€ + 2,16€/km en journée, 3,24€/km la nuit et dimanche.",
         },
       },
       {
