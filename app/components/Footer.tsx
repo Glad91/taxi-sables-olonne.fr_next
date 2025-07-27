@@ -25,6 +25,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Nos Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link href="/guide-taxi-sables-olonne" className="hover:text-white transition-colors">Guide taxi complet</Link></li>
               <li><Link href="/gare-sables-olonne" className="hover:text-white transition-colors">Transfert Gare SNCF</Link></li>
               <li><Link href="/aeroport-nantes" className="hover:text-white transition-colors">Aéroport Nantes</Link></li>
               <li><Link href="/transport-medical" className="hover:text-white transition-colors">Transport médical</Link></li>

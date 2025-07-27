@@ -1,31 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #1f2937;
-  --primary: #2563eb;
-  --taxi-yellow: #fbbf24;
-  --taxi-orange: #f97316;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-taxi-yellow: var(--taxi-yellow);
-  --color-taxi-orange: var(--taxi-orange);
-  --font-sans: 'Inter', system-ui, sans-serif;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
+@theme {
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --color-taxi-yellow: #fbbf24;
+  --color-taxi-orange: #f97316;
+  --color-taxi-blue: #0ea5e9;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
 }

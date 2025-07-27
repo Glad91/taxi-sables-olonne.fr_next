@@ -9,6 +9,7 @@ export default function Header() {
 
   const navigation = [
     { name: 'Accueil', href: '/' },
+    { name: 'Guide taxi', href: '/guide-taxi-sables-olonne' },
     { name: 'Gare SNCF', href: '/gare-sables-olonne' },
     { name: 'Aéroport Nantes', href: '/aeroport-nantes' },
     { name: 'Transport médical', href: '/transport-medical' },
@@ -39,7 +40,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -49,7 +50,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:0625193143"
-              className="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors flex items-center space-x-2"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center space-x-2"
             >
               <Phone className="h-4 w-4" />
               <span>06 25 19 31 43</span>
@@ -79,7 +80,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -88,7 +89,7 @@ export default function Header() {
               <div className="flex flex-col space-y-2 pt-2">
                 <a
                   href="tel:0625193143"
-                  className="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
                 >
                   <Phone className="h-4 w-4" />
                   <span>06 25 19 31 43</span>

@@ -5,7 +5,13 @@
       "WebFetch(domain:teriagen.com)",
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pkill:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm add:*)",
+      "Bash(rm:*)",
+      "Bash(pnpm build:*)"
     ],
     "deny": []
   }
