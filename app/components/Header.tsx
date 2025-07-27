@@ -3,20 +3,40 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Phone, Menu, X } from 'lucide-react'
+import { useGoogleAnalytics } from './GoogleTag'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { trackEvent } = useGoogleAnalytics()
+
+  const handlePhoneClick = () => {
+    trackEvent('phone_call', 'engagement', 'header_phone_button')
+  }
+
+  const handleReservationClick = () => {
+    trackEvent('start_booking', 'engagement', 'header_reservation_button')
+  }
 
   const navigation = [
+    { name: 'Guide', href: '/guide-taxi-sables-olonne' },
+    { name: 'Gare', href: '/gare-sables-olonne' },
+    { name: 'Aéroport', href: '/aeroport-nantes' },
+    { name: 'Médical', href: '/transport-medical' },
+    { name: 'Tarifs', href: '/tarifs' },
+    { name: 'Contact', href: '/contact' },
+  ]
+
+  const moreNavigation = [
     { name: 'Accueil', href: '/' },
-    { name: 'Guide taxi', href: '/guide-taxi-sables-olonne' },
+    { name: 'Guide taxi complet', href: '/guide-taxi-sables-olonne' },
     { name: 'Gare SNCF', href: '/gare-sables-olonne' },
     { name: 'Aéroport Nantes', href: '/aeroport-nantes' },
-    { name: 'Transport médical', href: '/transport-medical' },
+    { name: 'Transport médical VSL', href: '/transport-medical' },
     { name: 'Longue distance', href: '/longue-distance' },
     { name: 'Tarifs', href: '/tarifs' },
     { name: 'Avis clients', href: '/avis-clients' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Réservation', href: '/reservation' },
   ]
 
   return (
@@ -37,38 +57,41 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-6">
             {navigation.map(item => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             <a
               href="tel:0625193143"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center space-x-2"
+              onClick={handlePhoneClick}
+              className="bg-blue-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center space-x-2 text-sm whitespace-nowrap"
             >
               <Phone className="h-4 w-4" />
-              <span>06 25 19 31 43</span>
+              <span className="hidden xl:inline">06 25 19 31 43</span>
+              <span className="xl:hidden">Appeler</span>
             </a>
             <Link
               href="/reservation"
-              className="bg-taxi-yellow text-black px-4 py-2 rounded-lg font-medium hover:bg-taxi-orange hover:text-white transition-colors"
+              onClick={handleReservationClick}
+              className="bg-taxi-yellow text-black px-3 py-2 rounded-lg font-medium hover:bg-taxi-orange hover:text-white transition-colors text-sm whitespace-nowrap"
             >
               Réserver
             </Link>
           </div>
 
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-gray-900"
+              className="text-gray-700 hover:text-gray-900 p-2"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -80,9 +103,9 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mb-4">
-              {navigation.map(item => (
+              {moreNavigation.map(item => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -92,21 +115,18 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-2">
+              <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
                 <a
                   href="tel:0625193143"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+                  onClick={handlePhoneClick}
+                  className="bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-5 w-5" />
                   <span>06 25 19 31 43</span>
                 </a>
-                <Link
-                  href="/reservation"
-                  className="bg-taxi-yellow text-black px-4 py-2 rounded-lg font-medium hover:bg-taxi-orange hover:text-white transition-colors text-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Réserver en ligne
-                </Link>
+                <div className="text-xs text-gray-500 text-center">
+                  Service disponible 24h/24 - 7j/7
+                </div>
               </div>
             </div>
           </div>

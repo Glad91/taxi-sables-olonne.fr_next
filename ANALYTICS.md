@@ -33,11 +33,7 @@ export default function MyComponent() {
     trackEvent('button_click', 'engagement', 'header_cta')
   }
 
-  return (
-    <button onClick={handleButtonClick}>
-      Action Button
-    </button>
-  )
+  return <button onClick={handleButtonClick}>Action Button</button>
 }
 ```
 
@@ -51,7 +47,7 @@ Suit les événements personnalisés :
 // Exemple : Suivi d'un appel téléphonique
 trackEvent('phone_call', 'engagement', 'call_to_action_button')
 
-// Exemple : Ouverture d'itinéraire  
+// Exemple : Ouverture d'itinéraire
 trackEvent('get_directions', 'engagement', 'maps_directions')
 
 // Exemple : Démarrage de réservation
@@ -74,15 +70,15 @@ Suit les conversions importantes :
 ```tsx
 // Exemple : Réservation complétée
 trackConversion('booking_completed', {
-  value: 45.50,
+  value: 45.5,
   currency: 'EUR',
-  booking_type: 'airport_transfer'
+  booking_type: 'airport_transfer',
 })
 
 // Exemple : Appel téléphonique
 trackConversion('phone_call_started', {
   call_duration: 'unknown',
-  source: 'website_header'
+  source: 'website_header',
 })
 ```
 
@@ -93,7 +89,7 @@ Le projet suit automatiquement ces événements :
 ### CallToAction Component
 
 - **`phone_call`** - Clic sur bouton d'appel
-- **`get_directions`** - Clic sur itinéraire Google Maps  
+- **`get_directions`** - Clic sur itinéraire Google Maps
 - **`start_booking`** - Clic sur réservation en ligne
 
 ### Page Views
@@ -126,15 +122,15 @@ Google Analytics est **automatiquement désactivé** en mode développement.
 ### Tracking de Formulaire
 
 ```tsx
-const handleFormSubmit = (formData) => {
+const handleFormSubmit = formData => {
   // Track form submission
   trackEvent('form_submit', 'engagement', 'contact_form')
-  
+
   // Track conversion if booking
   if (formData.type === 'booking') {
     trackConversion('lead_generated', {
       form_type: 'contact',
-      service_type: formData.service
+      service_type: formData.service,
     })
   }
 }
@@ -143,7 +139,7 @@ const handleFormSubmit = (formData) => {
 ### Tracking de Navigation
 
 ```tsx
-const handleNavigation = (destination) => {
+const handleNavigation = destination => {
   trackEvent('navigation_click', 'engagement', `nav_${destination}`)
 }
 ```
@@ -151,7 +147,7 @@ const handleNavigation = (destination) => {
 ### Tracking de Téléchargement
 
 ```tsx
-const handleDownload = (fileName) => {
+const handleDownload = fileName => {
   trackEvent('file_download', 'engagement', fileName)
 }
 ```
@@ -173,7 +169,7 @@ Pour activer le debug en développement :
 // Temporairement en développement
 if (process.env.NODE_ENV === 'development') {
   window.gtag('config', GA_TRACKING_ID, {
-    debug_mode: true
+    debug_mode: true,
   })
 }
 ```
@@ -184,7 +180,7 @@ if (process.env.NODE_ENV === 'development') {
 
 - **Appels téléphoniques** - Conversions principales
 - **Demandes d'itinéraire** - Intention géographique
-- **Démarrages de réservation** - Funnel de conversion  
+- **Démarrages de réservation** - Funnel de conversion
 - **Soumissions de formulaire** - Génération de leads
 
 ### Métriques de Performance
