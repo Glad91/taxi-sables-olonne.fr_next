@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import GoogleTag from './components/GoogleTag'
 
 export const metadata: Metadata = {
   title: {
@@ -79,6 +80,7 @@ export default function RootLayout({
         <meta name="ICBM" content="46.496002, -1.783313" />
       </head>
       <body className="antialiased">
+        <GoogleTag />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
