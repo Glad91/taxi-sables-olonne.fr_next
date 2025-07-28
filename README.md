@@ -36,12 +36,18 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 
 - **Design responsive** - Optimisé mobile, tablette, desktop
 - **Interface moderne** - Design épuré avec Tailwind CSS v4
+- **Bouton d'appel mobile** - Accès direct au téléphone depuis le header
+- **Navigation optimisée** - Menu hamburger avec call-to-action intégré
 - **Accessibilité** - Respect des standards WCAG
 - **Performance** - Chargement rapide et optimisé
 
 ### 📊 Optimisations SEO/GEO
 
 - **Schema.org** - Données structurées (TaxiService, LocalBusiness, FAQ)
+- **Open Graph** - Optimisation partage réseaux sociaux et WhatsApp
+- **Web Vitals** - Monitoring performance en temps réel
+- **Page 404 personnalisée** - Expérience utilisateur optimisée
+- **Pages légales** - Mentions légales et maintenance
 - **GEO optimisé** - Optimisation pour les moteurs de recherche IA
 - **Contenu E-E-A-T** - Expertise, Expérience, Autorité, Fiabilité
 - **Citations et sources** - Références officielles et statistiques
@@ -61,6 +67,8 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 - **[ESLint 9](https://eslint.org/)** - Linter JavaScript/TypeScript
 - **[Prettier 3.6.2](https://prettier.io/)** - Formateur de code
 - **[Lucide React](https://lucide.dev/)** - Icônes SVG
+- **[Turbopack](https://turbo.build/pack)** - Bundler ultra-rapide (dev)
+- **[Critters](https://github.com/GoogleChromeLabs/critters)** - CSS critique inline
 - **[pnpm](https://pnpm.io/)** - Gestionnaire de paquets
 
 ### Déploiement
@@ -75,23 +83,29 @@ taxi-sables-olonne.fr_next/
 ├── 📁 app/                          # App Router Next.js 15
 │   ├── 📄 page.tsx                  # Page d'accueil
 │   ├── 📄 layout.tsx                # Layout principal
+│   ├── 📄 not-found.tsx             # Page 404 personnalisée
 │   ├── 📄 globals.css               # Styles globaux Tailwind
 │   ├── 📄 sitemap.ts                # Génération sitemap
 │   ├── 📁 components/               # Composants réutilisables
-│   │   ├── 📄 Header.tsx            # Navigation principale
+│   │   ├── 📄 Header.tsx            # Navigation avec bouton mobile
 │   │   ├── 📄 Footer.tsx            # Pied de page
 │   │   ├── 📄 CallToAction.tsx      # Boutons d'action
 │   │   ├── 📄 StructuredData.tsx    # Données structurées Schema.org
-│   │   └── 📄 SEOHead.tsx           # Métadonnées SEO
-│   ├── 📁 tarifs/                   # Page tarifs
+│   │   ├── 📄 JsonLD.tsx            # Schémas JSON-LD
+│   │   ├── 📄 OpenGraph.tsx         # Métadonnées Open Graph
+│   │   └── 📄 WebVitals.tsx         # Monitoring performance
+│   ├── 📁 tarifs/                   # Page tarifs harmonisés
 │   ├── 📁 reservation/              # Page réservation
 │   ├── 📁 contact/                  # Page contact
-│   ├── 📁 aeroport-nantes/          # Service aéroport
+│   ├── 📁 aeroport-nantes/          # Service aéroport (180€)
 │   ├── 📁 gare-sables-olonne/       # Service gare
 │   ├── 📁 longue-distance/          # Courses longue distance
 │   ├── 📁 transport-medical/        # VSL médical
 │   ├── 📁 guide-taxi-sables-olonne/ # Guide complet
 │   ├── 📁 avis-clients/             # Témoignages clients
+│   ├── 📁 mentions-legales/         # Page légale
+│   ├── 📁 maintenance/              # Page maintenance
+│   ├── 📁 mots-cles-longue-traine/  # SEO longue traîne
 │   └── 📁 robots.txt/               # Robots.txt dynamique
 ├── 📄 package.json                  # Dépendances et scripts
 ├── 📄 tsconfig.json                 # Configuration TypeScript
@@ -146,6 +160,7 @@ Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
 ### Mode de Développement
 
+- **Turbopack** - Bundler ultra-rapide (10x plus rapide que Webpack)
 - **Hot Reload** - Rechargement automatique
 - **Fast Refresh** - Préservation de l'état React
 - **TypeScript** - Vérification de types en temps réel
@@ -155,7 +170,7 @@ Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
 ```bash
 # Développement
-pnpm dev              # Serveur de développement
+pnpm dev              # Serveur de développement avec Turbopack
 pnpm build            # Build de production
 pnpm start            # Serveur de production
 
@@ -242,10 +257,12 @@ Configurer sur votre plateforme :
 
 ### Données Structurées Schema.org
 
-- **TaxiService** - Service de taxi
-- **LocalBusiness** - Entreprise locale
-- **FAQPage** - Questions fréquentes
-- **WebSite** - Site web principal
+- **TaxiService** - Service de taxi avec tarifs et zones
+- **LocalBusiness** - Entreprise locale géolocalisée
+- **FAQPage** - Questions fréquentes optimisées IA
+- **WebSite** - Site web avec SearchAction
+- **BreadcrumbList** - Navigation structurée
+- **Service** - Services spécifiques par page
 
 ### Optimisations GEO (Generative Engine Optimization)
 
@@ -257,8 +274,11 @@ Configurer sur votre plateforme :
 
 ### Performance
 
-- **Core Web Vitals** optimisés
-- **Images optimisées** avec Next.js Image
+- **Core Web Vitals** monitoring temps réel (WebVitals.tsx)
+- **Headers de performance** et cache optimisés
+- **Images optimisées** avec Next.js Image (WebP/AVIF)
+- **CSS critique** inline avec Critters
+- **Turbopack** pour développement ultra-rapide
 - **Lazy loading** automatique
 - **Bundle splitting** intelligent
 
