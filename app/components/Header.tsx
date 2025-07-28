@@ -88,7 +88,15 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="xl:hidden">
+          <div className="xl:hidden flex items-center space-x-2">
+            <a
+              href="tel:0625193143"
+              onClick={handlePhoneClick}
+              className="bg-green-600 text-white p-2 rounded-lg hover:bg-green-700 transition-colors"
+              aria-label="Appeler maintenant"
+            >
+              <Phone className="h-5 w-5" />
+            </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-gray-900 p-2"

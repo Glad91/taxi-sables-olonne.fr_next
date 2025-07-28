@@ -15,7 +15,8 @@
       "Bash(gh repo create:*)",
       "Bash(git push:*)",
       "Bash(pnpm run:*)",
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "Bash(pnpm install:*)"
     ],
     "deny": []
   }

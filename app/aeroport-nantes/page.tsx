@@ -6,7 +6,7 @@ import StructuredData from '../components/StructuredData'
 export const metadata: Metadata = {
   title: "Taxi Aéroport Nantes Atlantique | Transfert Sables-d'Olonne",
   description:
-    "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, ponctuel et confortable. Tarif fixe 140€. ☎️ 06 25 19 31 43",
+    "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, ponctuel et confortable. Tarif fixe 180€. ☎️ 06 25 19 31 43",
   keywords: [
     'taxi aéroport nantes',
     'transfert aéroport nantes atlantique',
@@ -92,7 +92,7 @@ export default function AeroportPage() {
                       Sables-d'Olonne ↔ Aéroport
                     </div>
                   </div>
-                  <span className="font-bold text-sky-600 text-xl">140€</span>
+                  <span className="font-bold text-sky-600 text-xl">180€</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <div>
@@ -101,7 +101,7 @@ export default function AeroportPage() {
                       Réservé le même jour
                     </div>
                   </div>
-                  <span className="font-bold text-sky-600 text-xl">220€</span>
+                  <span className="font-bold text-sky-600 text-xl">350€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
@@ -179,7 +179,7 @@ export default function AeroportPage() {
                 </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>
-                    • <strong>Distance :</strong> 95 km environ
+                    • <strong>Distance :</strong> 80 km environ
                   </li>
                   <li>
                     • <strong>Durée :</strong> 1h15 en moyenne

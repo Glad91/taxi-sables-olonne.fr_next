@@ -273,7 +273,7 @@ export default function ReservationPage() {
                     <strong>Centre-ville :</strong> À partir de 6€
                   </p>
                   <p>
-                    <strong>Aéroport Nantes :</strong> À partir de 140€
+                    <strong>Aéroport Nantes :</strong> À partir de 180€
                   </p>
                   <p>
                     <strong>Transport médical :</strong> Prise en charge

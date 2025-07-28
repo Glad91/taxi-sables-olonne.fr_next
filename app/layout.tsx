@@ -3,6 +3,8 @@ import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import GoogleTag from './components/GoogleTag'
+import WebVitals from './components/WebVitals'
+import JsonLD, { organizationSchema, websiteSchema } from './components/JsonLD'
 
 export const metadata: Metadata = {
   title: {
@@ -78,9 +80,12 @@ export default function RootLayout({
         <meta name="geo.placename" content="Les Sables-d'Olonne" />
         <meta name="geo.position" content="46.496002;-1.783313" />
         <meta name="ICBM" content="46.496002, -1.783313" />
+        <JsonLD data={organizationSchema} />
+        <JsonLD data={websiteSchema} />
       </head>
       <body className="antialiased">
         <GoogleTag />
+        <WebVitals />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

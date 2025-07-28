@@ -77,21 +77,21 @@ export default function LongueDistancePage() {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span>Nantes</span>
+                  <span>Nantes centre - 105km</span>
                   <span className="font-semibold text-purple-600">
-                    À partir de 100€
+                    230€
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>La Roche-sur-Yon</span>
+                  <span>La Roche-sur-Yon - 35km</span>
                   <span className="font-semibold text-purple-600">
-                    À partir de 45€
+                    79€
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>Bordeaux</span>
+                  <span>Bordeaux - 300km</span>
                   <span className="font-semibold text-purple-600">
-                    À partir de 280€
+                    650€
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -130,7 +130,7 @@ export default function LongueDistancePage() {
                 Région Pays de la Loire
               </h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• Nantes (85 km - 1h)</li>
+                <li>• Nantes centre (105 km - 1h15)</li>
                 <li>• La Roche-sur-Yon (35 km - 40min)</li>
                 <li>• Cholet (90 km - 1h15)</li>
                 <li>• Angers (120 km - 1h30)</li>
@@ -141,9 +141,9 @@ export default function LongueDistancePage() {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Nouvelle-Aquitaine</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• La Rochelle (120 km - 1h30)</li>
+                <li>• La Rochelle (110 km - 1h30)</li>
                 <li>• Poitiers (150 km - 1h45)</li>
-                <li>• Bordeaux (280 km - 3h)</li>
+                <li>• Bordeaux (300 km - 3h)</li>
                 <li>• Cognac (200 km - 2h15)</li>
                 <li>• Limoges (250 km - 2h45)</li>
               </ul>

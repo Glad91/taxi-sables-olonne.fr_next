@@ -6,7 +6,7 @@ import StructuredData from '../components/StructuredData'
 export const metadata: Metadata = {
   title: "Tarifs taxi Sables-d'Olonne | Prix transparents et compétitifs",
   description:
-    "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, gare Nantes 240€, aéroport Nantes 140€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
+    "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, gare Nantes 220€, aéroport Nantes 180€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
   keywords: [
     "tarifs taxi sables d'olonne",
     'prix taxi',
@@ -82,32 +82,32 @@ export default function TarifsPage() {
               </h2>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>Gare de Nantes (jour)</span>
-                  <span className="font-bold text-blue-600">240€</span>
+                  <span>Gare de Nantes (jour) - 100km</span>
+                  <span className="font-bold text-blue-600">220€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
                   <span>Gare de Nantes (nuit/dimanche)</span>
-                  <span className="font-bold text-blue-600">360€</span>
+                  <span className="font-bold text-blue-600">330€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>Aéroport Nantes Atlantique</span>
-                  <span className="font-bold text-blue-600">140€</span>
+                  <span>Aéroport Nantes Atlantique - 80km</span>
+                  <span className="font-bold text-blue-600">180€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>Nantes centre</span>
-                  <span className="font-bold text-blue-600">100€</span>
+                  <span>Nantes centre - 105km</span>
+                  <span className="font-bold text-blue-600">230€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>La Roche-sur-Yon</span>
-                  <span className="font-bold text-blue-600">45€</span>
+                  <span>La Roche-sur-Yon - 35km</span>
+                  <span className="font-bold text-blue-600">79€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>La Rochelle</span>
-                  <span className="font-bold text-blue-600">95€</span>
+                  <span>La Rochelle - 110km</span>
+                  <span className="font-bold text-blue-600">240€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>Bordeaux</span>
-                  <span className="font-bold text-blue-600">280€</span>
+                  <span>Bordeaux - 300km</span>
+                  <span className="font-bold text-blue-600">650€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Autres destinations</span>
