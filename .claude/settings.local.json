@@ -17,7 +17,8 @@
       "Bash(pnpm run:*)",
       "Bash(gh repo view:*)",
       "Bash(pnpm install:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(touch:*)"
     ],
     "deny": []
   }
