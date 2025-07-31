@@ -78,21 +78,15 @@ export default function LongueDistancePage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Nantes centre - 105km</span>
-                  <span className="font-semibold text-purple-600">
-                    230€
-                  </span>
+                  <span className="font-semibold text-purple-600">230€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>La Roche-sur-Yon - 35km</span>
-                  <span className="font-semibold text-purple-600">
-                    79€
-                  </span>
+                  <span className="font-semibold text-purple-600">79€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Bordeaux - 300km</span>
-                  <span className="font-semibold text-purple-600">
-                    650€
-                  </span>
+                  <span className="font-semibold text-purple-600">650€</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Paris</span>

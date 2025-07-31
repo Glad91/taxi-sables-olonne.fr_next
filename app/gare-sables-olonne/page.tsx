@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
-import { Train, Clock, MapPin, Phone } from 'lucide-react'
+import { Train, Clock, MapPin, Phone, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import JsonLD, { breadcrumbSchema } from '../components/JsonLD'
 
 export const metadata: Metadata = {
   title: "Taxi Gare SNCF Sables-d'Olonne | Transfert rapide et ponctuel",
@@ -19,9 +21,37 @@ export const metadata: Metadata = {
 }
 
 export default function GarePage() {
+  const breadcrumbItems = [
+    { name: 'Accueil', url: 'https://taxi-sables-olonne.fr' },
+    {
+      name: "Taxi Gare SNCF Sables-d'Olonne",
+      url: 'https://taxi-sables-olonne.fr/gare-sables-olonne',
+    },
+  ]
+
   return (
     <>
       <StructuredData type="TaxiService" />
+      <JsonLD data={breadcrumbSchema(breadcrumbItems)} />
+
+      {/* Breadcrumb Navigation */}
+      <nav className="bg-gray-100 py-3" aria-label="Fil d'Ariane">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-blue-600 hover:text-blue-800">
+                Accueil
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="h-4 w-4 text-gray-400 mx-2" />
+              <span className="text-gray-700">
+                Taxi Gare SNCF Sables-d'Olonne
+              </span>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

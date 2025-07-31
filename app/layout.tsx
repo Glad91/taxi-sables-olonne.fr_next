@@ -8,7 +8,7 @@ import JsonLD, { organizationSchema, websiteSchema } from './components/JsonLD'
 
 export const metadata: Metadata = {
   title: {
-    default: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24 Place Napoléon III",
+    default: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24",
     template: "%s | Taxi Sables-d'Olonne",
   },
   description:

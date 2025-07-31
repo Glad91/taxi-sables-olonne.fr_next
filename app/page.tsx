@@ -11,19 +11,21 @@ import {
 } from 'lucide-react'
 import CallToAction from './components/CallToAction'
 import StructuredData from './components/StructuredData'
+import FAQStructuredData, { taxiFAQItems } from './components/FAQStructuredData'
 
 export const metadata: Metadata = {
-  title: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24 Place Napoléon III",
+  title: "Taxi Sables-d'Olonne | Réservation 24h/24 - Chauffeur privé",
   description:
-    "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical VSL. ☎️ 06 25 19 31 43",
+    "Service taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical VSL. Devis gratuit. ☎️ 06 25 19 31 43",
   keywords: [
     "taxi sables d'olonne",
     "chauffeur privé sables d'olonne",
+    'réservation taxi',
     "transport sables d'olonne",
-    'taxi place napoléon III',
     'VSL conventionné',
     'transfert aéroport nantes',
     "gare SNCF sables d'olonne",
+    'taxi 24h/24',
   ],
   alternates: {
     canonical: 'https://taxi-sables-olonne.fr',
@@ -34,7 +36,7 @@ export default function Home() {
   return (
     <>
       <StructuredData type="TaxiService" />
-      <StructuredData type="FAQ" />
+      <FAQStructuredData faqItems={taxiFAQItems} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
@@ -43,7 +45,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="block">Taxi Sables-d'Olonne</span>
               <span className="block text-yellow-300">
-                Votre chauffeur de confiance
+                Réservation 24h/24 - Service immédiat
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -84,30 +86,34 @@ export default function Home() {
             <Link
               href="/gare-sables-olonne"
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow group"
+              title="Transfert taxi gare SNCF Sables-d'Olonne - Service 24h/24"
             >
               <div className="text-blue-600 mb-4 group-hover:text-blue-700">
-                <Car className="h-12 w-12" />
+                <Car className="h-12 w-12" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3">
-                Transfert Gare SNCF
+                Taxi Gare SNCF Sables-d'Olonne
               </h3>
               <p className="text-gray-600">
                 Transport rapide et ponctuel depuis et vers la gare SNCF des
-                Sables-d'Olonne.
+                Sables-d'Olonne. Disponible pour tous vos trains.
               </p>
             </Link>
 
             <Link
               href="/aeroport-nantes"
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow group"
+              title="Taxi aéroport Nantes depuis Sables-d'Olonne - Tarif fixe 180€"
             >
               <div className="text-blue-600 mb-4 group-hover:text-blue-700">
-                <Car className="h-12 w-12" />
+                <Car className="h-12 w-12" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Aéroport Nantes</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Taxi Aéroport Nantes
+              </h3>
               <p className="text-gray-600">
                 Transfert confortable vers l'aéroport Nantes Atlantique avec
-                suivi de vol.
+                suivi de vol. Tarif fixe 180€.
               </p>
             </Link>
 

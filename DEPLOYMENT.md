@@ -23,11 +23,13 @@ vercel
 ### Résultat
 
 Vercel va générer une URL du type :
+
 ```
 https://taxi-sables-olonne-fr-next-abc123-glad91.vercel.app
 ```
 
 **✅ Avantages :**
+
 - URL automatiquement privée
 - Pas de configuration
 - Nouvelle URL unique à chaque déploiement
@@ -44,6 +46,7 @@ https://taxi-sables-olonne-fr-next-abc123-glad91.vercel.app
 ### Désactiver Analytics en Test
 
 Dans Vercel Dashboard > Settings > Environment Variables :
+
 ```env
 NEXT_PUBLIC_GA_ID=(laisser vide)
 ```
@@ -73,7 +76,7 @@ vercel logs
 
 ---
 
-## 🚀 Résumé 
+## 🚀 Résumé
 
 ```bash
 vercel login

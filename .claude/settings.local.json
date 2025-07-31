@@ -18,7 +18,10 @@
       "Bash(gh repo view:*)",
       "Bash(pnpm install:*)",
       "Bash(git commit:*)",
-      "Bash(touch:*)"
+      "Bash(touch:*)",
+      "WebFetch(domain:developers.google.com)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm format:*)"
     ],
     "deny": []
   }

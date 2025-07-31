@@ -4,14 +4,16 @@ import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
 
 export const metadata: Metadata = {
-  title: "Tarifs taxi Sables-d'Olonne | Prix transparents et compétitifs",
+  title: "Tarifs Taxi Sables-d'Olonne 2024 | Prix gare, aéroport, VSL",
   description:
-    "Découvrez nos tarifs taxi aux Sables-d'Olonne : gare SNCF 8€, gare Nantes 220€, aéroport Nantes 180€, transport médical pris en charge. Prix transparents. ☎️ 06 25 19 31 43",
+    "Tarifs taxi Sables-d'Olonne 2024 : gare SNCF 8€, aéroport Nantes 180€, transport médical VSL remboursé. Devis gratuit pour longue distance. ☎️ 06 25 19 31 43",
   keywords: [
-    "tarifs taxi sables d'olonne",
-    'prix taxi',
-    'tarif gare SNCF',
+    "tarifs taxi sables d'olonne 2024",
+    'prix taxi gare SNCF',
     'tarif aéroport nantes',
+    'transport médical VSL',
+    'devis taxi gratuit',
+    'prix transparent taxi',
   ],
   alternates: {
     canonical: 'https://taxi-sables-olonne.fr/tarifs',
