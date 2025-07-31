@@ -40,7 +40,13 @@ export default function ReservationPage() {
                 Formulaire de réservation
               </h2>
 
-              <form className="space-y-6">
+              <form 
+                className="space-y-6" 
+                action="mailto:contact@taxi-sables-olonne.fr"
+                method="post"
+                encType="text/plain"
+                aria-label="Formulaire de réservation taxi"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -50,14 +56,19 @@ export default function ReservationPage() {
                       Nom complet *
                     </label>
                     <div className="relative">
-                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" aria-hidden="true" />
                       <input
                         type="text"
                         id="nom"
+                        name="nom"
                         required
+                        aria-describedby="nom-error"
                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                         placeholder="Votre nom"
+                        pattern="[A-Za-zÀ-ÿ\s]{2,50}"
+                        title="Nom complet requis (2-50 caractères)"
                       />
+                      <div id="nom-error" className="text-red-500 text-xs mt-1 hidden" role="alert"></div>
                     </div>
                   </div>
                   <div>

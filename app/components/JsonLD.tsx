@@ -96,10 +96,10 @@ export const organizationSchema = {
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.8',
+    ratingValue: '4.7',
     bestRating: '5',
     worstRating: '1',
-    ratingCount: '127',
+    ratingCount: '143',
   },
   sameAs: [
     'https://www.facebook.com/taxisablesolonne',

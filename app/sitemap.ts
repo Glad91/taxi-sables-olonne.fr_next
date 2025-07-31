@@ -1,7 +1,15 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://taxi-sables-olonne.fr'
+  // Récupération automatique de l'URL de base selon l'environnement
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? (process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}` 
+        : 'https://taxi-sables-olonne.fr')
+    : (process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}` 
+        : 'http://localhost:3000')
+  
   const currentDate = new Date()
 
   return [

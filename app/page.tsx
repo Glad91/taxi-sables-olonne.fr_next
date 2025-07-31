@@ -16,7 +16,7 @@ import FAQStructuredData, { taxiFAQItems } from './components/FAQStructuredData'
 export const metadata: Metadata = {
   title: "Taxi Sables-d'Olonne | Réservation 24h/24 - Chauffeur privé",
   description:
-    "Service taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical VSL. Devis gratuit. ☎️ 06 25 19 31 43",
+    "Taxi Sables-d'Olonne 24h/24. Gare SNCF 8€, aéroport Nantes 180€, VSL remboursé. Réservation immédiate ☎️ 06 25 19 31 43",
   keywords: [
     "taxi sables d'olonne",
     "chauffeur privé sables d'olonne",
