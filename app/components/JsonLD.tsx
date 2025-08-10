@@ -94,16 +94,12 @@ export const organizationSchema = {
       },
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.7',
-    bestRating: '5',
-    worstRating: '1',
-    ratingCount: '143',
-  },
+  // aggregateRating supprimé - données fictives risquent pénalité Google
+  // À réactiver uniquement avec de vrais avis clients vérifiables
   sameAs: [
-    'https://www.facebook.com/taxisablesolonne',
-    'https://maps.google.com/maps?cid=123456789',
+    // URLs à remplacer par de vrais profils sociaux
+    // 'https://www.facebook.com/taxisablesolonne', // À vérifier
+    // 'https://maps.google.com/maps?cid=REAL_ID',  // ID Google Maps réel
   ],
 }
 

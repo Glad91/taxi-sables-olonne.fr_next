@@ -5,7 +5,7 @@ import StructuredData from '../components/StructuredData'
 import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: "Transport médical VSL | Taxi conventionné Sables-d'Olonne",
+  title: "Transport médical VSL | Remboursé",
   description:
     "Transport médical assis VSL conventionné aux Sables-d'Olonne. Prise en charge Sécurité Sociale pour vos rendez-vous médicaux. Service professionnel et discret. ☎️ 06 25 19 31 43",
   keywords: [

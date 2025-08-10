@@ -5,7 +5,7 @@ import StructuredData from '../components/StructuredData'
 import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: "Taxi Gare SNCF Sables-d'Olonne | Transfert rapide et ponctuel",
+  title: "Gare SNCF | Transfert 8€",
   description:
     "Transfert taxi depuis/vers la gare SNCF des Sables-d'Olonne. Service rapide et ponctuel, disponible 24h/24. Tarif préférentiel à partir de 8€. ☎️ 06 25 19 31 43",
   keywords: [

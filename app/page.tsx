@@ -14,7 +14,9 @@ import StructuredData from './components/StructuredData'
 import FAQStructuredData, { taxiFAQItems } from './components/FAQStructuredData'
 
 export const metadata: Metadata = {
-  title: "Taxi Sables-d'Olonne | Réservation 24h/24 - Chauffeur privé",
+  title: {
+    absolute: "Taxi Sables-d'Olonne | Réservation 24h/24"
+  },
   description:
     "Taxi Sables-d'Olonne 24h/24. Gare SNCF 8€, aéroport Nantes 180€, VSL remboursé. Réservation immédiate ☎️ 06 25 19 31 43",
   keywords: [

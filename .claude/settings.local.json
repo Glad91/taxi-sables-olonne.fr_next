@@ -23,7 +23,10 @@
       "Bash(pnpm lint:*)",
       "Bash(pnpm format:*)",
       "WebFetch(domain:taxinextv2.vercel.app)",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:taxinextv2-5pprc6572-benjamins-projects-3b7732fa.vercel.app)",
+      "WebFetch(domain:www.taxi-sables-olonne.fr)"
     ],
     "deny": []
   }
