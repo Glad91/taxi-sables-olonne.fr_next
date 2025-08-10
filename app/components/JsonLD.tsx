@@ -11,11 +11,20 @@ export default function JsonLD({ data }: JsonLDProps) {
     // Validation que le JSON est valide
     JSON.parse(jsonString)
     
+    // Escape des caractères problématiques pour éviter les erreurs appendChild
+    const escapedJson = jsonString
+      .replace(/\\/g, '\\\\')
+      .replace(/"/g, '\\"')
+      .replace(/'/g, "\\'")
+      .replace(/\n/g, '\\n')
+      .replace(/\r/g, '\\r')
+      .replace(/\t/g, '\\t')
+    
     return (
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: jsonString,
+          __html: jsonString, // Utiliser le JSON original, pas échappé pour ce cas
         }}
       />
     )
@@ -30,18 +39,18 @@ export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'TaxiService',
   '@id': 'https://taxi-sables-olonne.fr/#organization',
-  name: "Taxi Sables-d'Olonne",
-  legalName: "Taxi Sables-d'Olonne",
+  name: 'Taxi Sables-d Olonne',
+  legalName: 'Taxi Sables-d Olonne',
   url: 'https://taxi-sables-olonne.fr',
   logo: 'https://taxi-sables-olonne.fr/logo.png',
   description:
-    "Service de taxi professionnel aux Sables-d'Olonne disponible 24h/24 et 7j/7. Transferts aéroport, gare SNCF, transport médical VSL.",
+    'Service de taxi professionnel aux Sables-d Olonne disponible 24h/24 et 7j/7. Transferts aeroport, gare SNCF, transport medical VSL.',
   telephone: '+33625193143',
   email: 'contact@taxi-sables-olonne.fr',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Place Napoléon III',
-    addressLocality: "Les Sables-d'Olonne",
+    addressLocality: 'Les Sables-d Olonne',
     postalCode: '85100',
     addressRegion: 'Vendée',
     addressCountry: 'FR',
@@ -85,7 +94,7 @@ export const organizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Taxi urbain',
-          description: "Service de taxi dans Les Sables-d'Olonne",
+          description: 'Service de taxi dans Les Sables-d Olonne',
         },
       },
       {
@@ -93,7 +102,7 @@ export const organizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Transfert aéroport',
-          description: "Transfert vers l'aéroport de Nantes Atlantique",
+          description: 'Transfert vers l aeroport de Nantes Atlantique',
         },
       },
       {
@@ -101,18 +110,15 @@ export const organizationSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Transport médical VSL',
-          description: 'Véhicule Sanitaire Léger conventionné',
+          description: 'Vehicule Sanitaire Leger conventionne',
         },
       },
     ],
   },
   // aggregateRating supprimé - données fictives risquent pénalité Google
   // À réactiver uniquement avec de vrais avis clients vérifiables
-  sameAs: [
-    // URLs à remplacer par de vrais profils sociaux
-    // 'https://www.facebook.com/taxisablesolonne', // À vérifier
-    // 'https://maps.google.com/maps?cid=REAL_ID',  // ID Google Maps réel
-  ],
+  // sameAs temporairement supprimé pour éviter les erreurs
+  // sameAs: [],
 }
 
 export const websiteSchema = {
@@ -120,8 +126,8 @@ export const websiteSchema = {
   '@type': 'WebSite',
   '@id': 'https://taxi-sables-olonne.fr/#website',
   url: 'https://taxi-sables-olonne.fr',
-  name: "Taxi Sables-d'Olonne",
-  description: "Site officiel du service de taxi aux Sables-d'Olonne",
+  name: 'Taxi Sables-d Olonne',
+  description: 'Site officiel du service de taxi aux Sables-d Olonne',
   publisher: {
     '@id': 'https://taxi-sables-olonne.fr/#organization',
   },
@@ -164,7 +170,7 @@ export const serviceSchema = (
   },
   areaServed: {
     '@type': 'City',
-    name: "Les Sables-d'Olonne",
+    name: 'Les Sables-d Olonne',
     addressCountry: 'FR',
   },
   ...(price && {
