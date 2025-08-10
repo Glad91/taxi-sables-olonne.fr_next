@@ -75,6 +75,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="canonical" href="https://taxi-sables-olonne.fr" />
         <meta name="geo.region" content="FR-85" />
         <meta name="geo.placename" content="Les Sables-d'Olonne" />

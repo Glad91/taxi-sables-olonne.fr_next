@@ -3,14 +3,26 @@ interface JsonLDProps {
 }
 
 export default function JsonLD({ data }: JsonLDProps) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data, null, 2),
-      }}
-    />
-  )
+  // Validation des données pour éviter les erreurs appendChild
+  const safeData = data || {}
+  
+  try {
+    const jsonString = JSON.stringify(safeData, null, 2)
+    // Validation que le JSON est valide
+    JSON.parse(jsonString)
+    
+    return (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonString,
+        }}
+      />
+    )
+  } catch (error) {
+    console.warn('JsonLD: Invalid data provided', error)
+    return null
+  }
 }
 
 // Schémas prédéfinis pour le site taxi

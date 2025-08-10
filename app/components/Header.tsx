@@ -99,7 +99,10 @@ export default function Header() {
             </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-gray-900 p-2"
+              className="text-gray-700 hover:text-gray-900 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
