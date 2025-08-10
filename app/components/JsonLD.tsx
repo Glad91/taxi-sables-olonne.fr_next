@@ -34,6 +34,11 @@ export const organizationSchema = {
   legalName: "Taxi Sables-d'Olonne",
   url: 'https://taxi-sables-olonne.fr',
   logo: 'https://taxi-sables-olonne.fr/logo.png',
+  image: [
+    'https://taxi-sables-olonne.fr/taxi-sables-olonne-vehicule.jpg',
+    'https://taxi-sables-olonne.fr/taxi-sables-olonne-service.jpg',
+    'https://taxi-sables-olonne.fr/logo.png'
+  ],
   description:
     "Service de taxi professionnel aux Sables-d'Olonne disponible 24h/24 et 7j/7. Transferts aéroport, gare SNCF, transport médical VSL.",
   telephone: '+33625193143',
