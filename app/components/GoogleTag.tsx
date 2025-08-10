@@ -68,18 +68,6 @@ export default function GoogleTag({ gtag_id }: GoogleTagProps) {
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-<<<<<<< Updated upstream
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              anonymize_ip: true,
-              cookie_flags: 'SameSite=None;Secure',
-              send_page_view: true
-            });
-          `,
-=======
           __html: `(function() {
 try {
   window.dataLayer = window.dataLayer || [];
@@ -94,7 +82,6 @@ try {
   console.warn('GoogleTag error:', e);
 }
 })();`,
->>>>>>> Stashed changes
         }}
       />
     </>
