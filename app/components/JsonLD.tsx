@@ -5,12 +5,12 @@ interface JsonLDProps {
 export default function JsonLD({ data }: JsonLDProps) {
   // Validation des données pour éviter les erreurs appendChild
   const safeData = data || {}
-  
+
   try {
     const jsonString = JSON.stringify(safeData, null, 2)
     // Validation que le JSON est valide
     JSON.parse(jsonString)
-    
+
     return (
       <script
         type="application/ld+json"
@@ -37,7 +37,7 @@ export const organizationSchema = {
   image: [
     'https://taxi-sables-olonne.fr/taxi-sables-olonne-vehicule.jpg',
     'https://taxi-sables-olonne.fr/taxi-sables-olonne-service.jpg',
-    'https://taxi-sables-olonne.fr/logo.png'
+    'https://taxi-sables-olonne.fr/logo.png',
   ],
   description:
     "Service de taxi professionnel aux Sables-d'Olonne disponible 24h/24 et 7j/7. Transferts aéroport, gare SNCF, transport médical VSL.",
@@ -115,8 +115,12 @@ export const organizationSchema = {
   priceRange: '€€',
   currenciesAccepted: 'EUR',
   paymentAccepted: ['Espèces', 'Carte bancaire', 'Chèque'],
-  knowsAbout: ['Transport de personnes', 'Transferts aéroports', 'Transport médical'],
-  
+  knowsAbout: [
+    'Transport de personnes',
+    'Transferts aéroports',
+    'Transport médical',
+  ],
+
   // aggregateRating supprimé - données fictives risquent pénalité Google
   // À réactiver uniquement avec de vrais avis clients vérifiables
   sameAs: [

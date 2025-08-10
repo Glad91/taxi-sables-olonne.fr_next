@@ -77,24 +77,30 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link 
-          rel="stylesheet" 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
-          media="print" 
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
         />
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          media="print"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             document.addEventListener('DOMContentLoaded', function() {
               const link = document.querySelector('link[href*="fonts.googleapis.com"]');
               if (link) link.media = 'all';
             });
-          `
-        }} />
+          `,
+          }}
+        />
         <noscript>
-          <link 
-            rel="stylesheet" 
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           />
         </noscript>
         <link rel="canonical" href="https://taxi-sables-olonne.fr" />

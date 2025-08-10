@@ -83,7 +83,7 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
   },
-  
+
   // Server-side optimizations
   async rewrites() {
     return [

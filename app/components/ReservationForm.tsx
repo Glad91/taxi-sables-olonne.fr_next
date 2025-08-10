@@ -1,8 +1,23 @@
 'use client'
 
 import { useState } from 'react'
-import { Calendar, Clock, MapPin, Phone, User, Mail, Car, MessageSquare, AlertCircle, CheckCircle } from 'lucide-react'
-import { validateField, serviceTypes, type ReservationFormData } from '@/app/lib/validation'
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Phone,
+  User,
+  Mail,
+  Car,
+  MessageSquare,
+  AlertCircle,
+  CheckCircle,
+} from 'lucide-react'
+import {
+  validateField,
+  serviceTypes,
+  type ReservationFormData,
+} from '@/app/lib/validation'
 
 interface FormErrors {
   [key: string]: string
@@ -21,7 +36,7 @@ const initialFormState: FormState = {
   isSubmitted: false,
   errors: {},
   generalError: '',
-  successMessage: ''
+  successMessage: '',
 }
 
 const initialFormData: ReservationFormData = {
@@ -35,7 +50,7 @@ const initialFormData: ReservationFormData = {
   lieuArrivee: '',
   nombrePassagers: '1',
   typeService: '',
-  informationsComplementaires: ''
+  informationsComplementaires: '',
 }
 
 export default function ReservationForm() {
@@ -43,27 +58,34 @@ export default function ReservationForm() {
   const [formState, setFormState] = useState<FormState>(initialFormState)
 
   // Fonction pour valider un champ en temps réel
-  const validateFieldRealTime = (fieldName: keyof ReservationFormData, value: string) => {
+  const validateFieldRealTime = (
+    fieldName: keyof ReservationFormData,
+    value: string
+  ) => {
     const { isValid, error } = validateField(fieldName, value)
-    
+
     setFormState(prev => ({
       ...prev,
       errors: {
         ...prev.errors,
-        [fieldName]: isValid ? '' : (error || 'Erreur de validation')
-      }
+        [fieldName]: isValid ? '' : error || 'Erreur de validation',
+      },
     }))
-    
+
     return isValid
   }
 
   // Gestion des changements de champs
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target
-    
+
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }))
 
     // Validation en temps réel avec délai pour éviter trop d'appels
@@ -75,12 +97,12 @@ export default function ReservationForm() {
   // Soumission du formulaire
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     setFormState(prev => ({
       ...prev,
       isSubmitting: true,
       generalError: '',
-      successMessage: ''
+      successMessage: '',
     }))
 
     try {
@@ -89,7 +111,7 @@ export default function ReservationForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       })
 
       const result = await response.json()
@@ -100,13 +122,13 @@ export default function ReservationForm() {
           setFormState(prev => ({
             ...prev,
             errors: result.details,
-            generalError: 'Veuillez corriger les erreurs ci-dessous'
+            generalError: 'Veuillez corriger les erreurs ci-dessous',
           }))
         } else {
           // Erreur générale
           setFormState(prev => ({
             ...prev,
-            generalError: result.error || 'Une erreur est survenue'
+            generalError: result.error || 'Une erreur est survenue',
           }))
         }
       } else {
@@ -114,38 +136,25 @@ export default function ReservationForm() {
         setFormState(prev => ({
           ...prev,
           isSubmitted: true,
-          successMessage: 'Votre réservation a été envoyée avec succès ! Nous vous contacterons rapidement.'
+          successMessage:
+            'Votre réservation a été envoyée avec succès ! Nous vous contacterons rapidement.',
         }))
-        
+
         // Reset du formulaire
         setFormData(initialFormData)
       }
     } catch (error) {
-      console.error('Erreur lors de l\'envoi:', error)
+      console.error("Erreur lors de l'envoi:", error)
       setFormState(prev => ({
         ...prev,
-        generalError: 'Erreur de connexion. Veuillez réessayer.'
+        generalError: 'Erreur de connexion. Veuillez réessayer.',
       }))
     } finally {
       setFormState(prev => ({
         ...prev,
-        isSubmitting: false
+        isSubmitting: false,
       }))
     }
-  }
-
-  // Génération des options de date (aujourd'hui + 365 jours)
-  const generateDateOptions = () => {
-    const today = new Date()
-    const dates = []
-    
-    for (let i = 0; i < 365; i++) {
-      const date = new Date(today)
-      date.setDate(today.getDate() + i)
-      dates.push(date.toISOString().split('T')[0])
-    }
-    
-    return dates
   }
 
   // Si le formulaire a été soumis avec succès
@@ -156,9 +165,7 @@ export default function ReservationForm() {
         <h3 className="text-xl font-semibold text-green-800 mb-2">
           Réservation envoyée !
         </h3>
-        <p className="text-green-700 mb-6">
-          {formState.successMessage}
-        </p>
+        <p className="text-green-700 mb-6">{formState.successMessage}</p>
         <button
           onClick={() => setFormState(initialFormState)}
           className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
@@ -171,9 +178,7 @@ export default function ReservationForm() {
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-semibold mb-6">
-        Formulaire de réservation
-      </h2>
+      <h2 className="text-2xl font-semibold mb-6">Formulaire de réservation</h2>
 
       {/* Erreur générale */}
       {formState.generalError && (
@@ -189,7 +194,10 @@ export default function ReservationForm() {
         {/* Informations personnelles */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="prenom" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="prenom"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <User className="h-4 w-4 mr-1" />
               Prénom *
             </label>
@@ -206,12 +214,17 @@ export default function ReservationForm() {
               required
             />
             {formState.errors.prenom && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.prenom}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.prenom}
+              </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="nom" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="nom"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <User className="h-4 w-4 mr-1" />
               Nom *
             </label>
@@ -228,7 +241,9 @@ export default function ReservationForm() {
               required
             />
             {formState.errors.nom && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.nom}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.nom}
+              </p>
             )}
           </div>
         </div>
@@ -236,7 +251,10 @@ export default function ReservationForm() {
         {/* Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="telephone" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="telephone"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <Phone className="h-4 w-4 mr-1" />
               Téléphone *
             </label>
@@ -247,18 +265,25 @@ export default function ReservationForm() {
               value={formData.telephone}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.telephone ? 'border-red-500' : 'border-gray-300'
+                formState.errors.telephone
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               placeholder="06 12 34 56 78"
               required
             />
             {formState.errors.telephone && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.telephone}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.telephone}
+              </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="email" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="email"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <Mail className="h-4 w-4 mr-1" />
               Email *
             </label>
@@ -275,7 +300,9 @@ export default function ReservationForm() {
               required
             />
             {formState.errors.email && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.email}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.email}
+              </p>
             )}
           </div>
         </div>
@@ -283,7 +310,10 @@ export default function ReservationForm() {
         {/* Date et heure */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="dateReservation" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="dateReservation"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <Calendar className="h-4 w-4 mr-1" />
               Date *
             </label>
@@ -294,19 +324,30 @@ export default function ReservationForm() {
               value={formData.dateReservation}
               onChange={handleChange}
               min={new Date().toISOString().split('T')[0]}
-              max={new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+              max={
+                new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+                  .toISOString()
+                  .split('T')[0]
+              }
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.dateReservation ? 'border-red-500' : 'border-gray-300'
+                formState.errors.dateReservation
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               required
             />
             {formState.errors.dateReservation && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.dateReservation}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.dateReservation}
+              </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="heureReservation" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="heureReservation"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <Clock className="h-4 w-4 mr-1" />
               Heure *
             </label>
@@ -317,12 +358,16 @@ export default function ReservationForm() {
               value={formData.heureReservation}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.heureReservation ? 'border-red-500' : 'border-gray-300'
+                formState.errors.heureReservation
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               required
             />
             {formState.errors.heureReservation && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.heureReservation}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.heureReservation}
+              </p>
             )}
           </div>
         </div>
@@ -330,7 +375,10 @@ export default function ReservationForm() {
         {/* Trajet */}
         <div className="space-y-6">
           <div>
-            <label htmlFor="lieuDepart" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="lieuDepart"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <MapPin className="h-4 w-4 mr-1" />
               Lieu de départ *
             </label>
@@ -341,18 +389,25 @@ export default function ReservationForm() {
               value={formData.lieuDepart}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.lieuDepart ? 'border-red-500' : 'border-gray-300'
+                formState.errors.lieuDepart
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               placeholder="ex: Place Napoléon III, Les Sables-d'Olonne"
               required
             />
             {formState.errors.lieuDepart && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.lieuDepart}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.lieuDepart}
+              </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="lieuArrivee" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="lieuArrivee"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <MapPin className="h-4 w-4 mr-1" />
               Lieu d'arrivée *
             </label>
@@ -363,13 +418,17 @@ export default function ReservationForm() {
               value={formData.lieuArrivee}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.lieuArrivee ? 'border-red-500' : 'border-gray-300'
+                formState.errors.lieuArrivee
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               placeholder="ex: Aéroport Nantes Atlantique"
               required
             />
             {formState.errors.lieuArrivee && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.lieuArrivee}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.lieuArrivee}
+              </p>
             )}
           </div>
         </div>
@@ -377,7 +436,10 @@ export default function ReservationForm() {
         {/* Service et passagers */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="nombrePassagers" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="nombrePassagers"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <User className="h-4 w-4 mr-1" />
               Nombre de passagers *
             </label>
@@ -387,7 +449,9 @@ export default function ReservationForm() {
               value={formData.nombrePassagers}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.nombrePassagers ? 'border-red-500' : 'border-gray-300'
+                formState.errors.nombrePassagers
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               required
             >
@@ -398,12 +462,17 @@ export default function ReservationForm() {
               ))}
             </select>
             {formState.errors.nombrePassagers && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.nombrePassagers}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.nombrePassagers}
+              </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="typeService" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="typeService"
+              className="flex items-center text-sm font-medium text-gray-700 mb-2"
+            >
               <Car className="h-4 w-4 mr-1" />
               Type de service *
             </label>
@@ -413,7 +482,9 @@ export default function ReservationForm() {
               value={formData.typeService}
               onChange={handleChange}
               className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-                formState.errors.typeService ? 'border-red-500' : 'border-gray-300'
+                formState.errors.typeService
+                  ? 'border-red-500'
+                  : 'border-gray-300'
               }`}
               required
             >
@@ -425,14 +496,19 @@ export default function ReservationForm() {
               ))}
             </select>
             {formState.errors.typeService && (
-              <p className="text-red-600 text-sm mt-1">{formState.errors.typeService}</p>
+              <p className="text-red-600 text-sm mt-1">
+                {formState.errors.typeService}
+              </p>
             )}
           </div>
         </div>
 
         {/* Informations complémentaires */}
         <div>
-          <label htmlFor="informationsComplementaires" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="informationsComplementaires"
+            className="flex items-center text-sm font-medium text-gray-700 mb-2"
+          >
             <MessageSquare className="h-4 w-4 mr-1" />
             Informations complémentaires
           </label>
@@ -443,12 +519,16 @@ export default function ReservationForm() {
             onChange={handleChange}
             rows={4}
             className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-              formState.errors.informationsComplementaires ? 'border-red-500' : 'border-gray-300'
+              formState.errors.informationsComplementaires
+                ? 'border-red-500'
+                : 'border-gray-300'
             }`}
             placeholder="Bagages volumineux, numéro de vol, instructions particulières..."
           />
           {formState.errors.informationsComplementaires && (
-            <p className="text-red-600 text-sm mt-1">{formState.errors.informationsComplementaires}</p>
+            <p className="text-red-600 text-sm mt-1">
+              {formState.errors.informationsComplementaires}
+            </p>
           )}
         </div>
 
@@ -473,8 +553,9 @@ export default function ReservationForm() {
 
       <div className="mt-6 p-4 bg-blue-50 rounded-lg">
         <p className="text-sm text-blue-700">
-          <strong>Note :</strong> Une fois envoyé, ce formulaire génère un email automatique. 
-          Nous vous contacterons rapidement pour confirmer votre réservation.
+          <strong>Note :</strong> Une fois envoyé, ce formulaire génère un email
+          automatique. Nous vous contacterons rapidement pour confirmer votre
+          réservation.
         </p>
       </div>
     </div>

@@ -2,14 +2,15 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Récupération automatique de l'URL de base selon l'environnement
-  const baseUrl = process.env.NODE_ENV === 'production' 
-    ? (process.env.VERCEL_PROJECT_PRODUCTION_URL
+  const baseUrl =
+    process.env.NODE_ENV === 'production'
+      ? process.env.VERCEL_PROJECT_PRODUCTION_URL
         ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
         : process.env.VERCEL_URL?.includes('taxinextv2.vercel.app')
           ? 'https://taxinextv2.vercel.app'
-          : 'https://taxi-sables-olonne.fr')
-    : 'http://localhost:3000'
-  
+          : 'https://taxi-sables-olonne.fr'
+      : 'http://localhost:3000'
+
   const currentDate = new Date()
 
   return [

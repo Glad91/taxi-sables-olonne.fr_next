@@ -31,8 +31,6 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center py-4">
-            
-
             {/* Breadcrumb Navigation */}
             <ol className="flex items-center space-x-1 flex-1 min-w-0">
               <li className="flex items-center">
@@ -41,29 +39,41 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
                   className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 hover:text-taxi-orange hover:bg-taxi-yellow/5 rounded-lg transition-all duration-200"
                   title="Retour à l'accueil"
                 >
-                  <Home className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
+                  <Home
+                    className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform duration-200"
+                    aria-hidden="true"
+                  />
                   <span>Accueil</span>
                 </Link>
               </li>
-              
+
               {items.map((item, index) => (
                 <li key={index} className="flex items-center min-w-0">
                   {/* Séparateur moderne */}
                   <div className="flex items-center px-1">
-                    <ChevronRight className="h-4 w-4 text-gray-300" aria-hidden="true" />
+                    <ChevronRight
+                      className="h-4 w-4 text-gray-300"
+                      aria-hidden="true"
+                    />
                   </div>
-                  
+
                   {index === items.length - 1 ? (
                     // Page actuelle - Design distinctif
                     <div className="flex items-center bg-taxi-yellow/20 px-3 py-2 rounded-lg border-l-4 border-taxi-orange">
-                      <span className="text-sm font-semibold text-gray-800 truncate" title={item.name}>
+                      <span
+                        className="text-sm font-semibold text-gray-800 truncate"
+                        title={item.name}
+                      >
                         {item.name}
                       </span>
                     </div>
                   ) : (
                     // Pages intermédiaires - Liens stylisés
                     <Link
-                      href={item.url.replace('https://taxi-sables-olonne.fr', '')}
+                      href={item.url.replace(
+                        'https://taxi-sables-olonne.fr',
+                        ''
+                      )}
                       className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 hover:text-taxi-orange hover:bg-taxi-yellow/5 rounded-lg transition-all duration-200 truncate"
                       title={`Aller à ${item.name}`}
                     >

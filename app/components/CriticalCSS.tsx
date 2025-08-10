@@ -69,7 +69,5 @@ export default function CriticalCSS() {
     }
   `
 
-  return (
-    <style dangerouslySetInnerHTML={{ __html: criticalStyles }} />
-  )
+  return <style dangerouslySetInnerHTML={{ __html: criticalStyles }} />
 }

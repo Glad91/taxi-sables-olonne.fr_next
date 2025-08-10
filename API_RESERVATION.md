@@ -12,6 +12,7 @@
    - Gmail génère un mot de passe de 16 caractères (ex: `abcd efgh ijkl mnop`)
 
 3. **Configurer les variables d'environnement** dans `.env.local` :
+
 ```bash
 GMAIL_USER=votre.email@gmail.com
 GMAIL_APP_PASSWORD=abcd efgh ijkl mnop
@@ -20,11 +21,13 @@ GMAIL_APP_PASSWORD=abcd efgh ijkl mnop
 ## Utilisation de l'API
 
 ### Endpoint
+
 ```
 POST /api/reservation
 ```
 
 ### Format des données à envoyer
+
 ```json
 {
   "nom": "Dupont",
@@ -42,19 +45,20 @@ POST /api/reservation
 ```
 
 ### Exemple d'utilisation avec fetch
+
 ```javascript
 const reservationData = {
-  nom: "Dupont",
-  prenom: "Jean",
-  telephone: "06 25 19 31 43",
-  email: "jean.dupont@email.com",
-  dateReservation: "2024-12-25",
-  heureReservation: "14:30",
+  nom: 'Dupont',
+  prenom: 'Jean',
+  telephone: '06 25 19 31 43',
+  email: 'jean.dupont@email.com',
+  dateReservation: '2024-12-25',
+  heureReservation: '14:30',
   lieuDepart: "Gare SNCF Les Sables-d'Olonne",
-  lieuArrivee: "Aéroport Nantes Atlantique",
-  nombrePassagers: "2",
-  typeService: "Transfert aéroport",
-  informationsComplementaires: "Bagages volumineux"
+  lieuArrivee: 'Aéroport Nantes Atlantique',
+  nombrePassagers: '2',
+  typeService: 'Transfert aéroport',
+  informationsComplementaires: 'Bagages volumineux',
 }
 
 try {
@@ -63,11 +67,11 @@ try {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(reservationData)
+    body: JSON.stringify(reservationData),
   })
-  
+
   const result = await response.json()
-  
+
   if (response.ok) {
     console.log('Réservation envoyée :', result.message)
   } else {
@@ -81,6 +85,7 @@ try {
 ## Format de l'email reçu
 
 L'email envoyé contient :
+
 - 📧 **Template HTML responsive** avec design professionnel
 - 👤 **Informations client complètes** (nom, téléphone, email)
 - 🗓️ **Détails de réservation** (date, heure, passagers)
@@ -92,6 +97,7 @@ L'email envoyé contient :
 ## Réponses de l'API
 
 ### Succès (200)
+
 ```json
 {
   "success": true,
@@ -102,6 +108,7 @@ L'email envoyé contient :
 ### Erreurs
 
 #### Champs manquants (400)
+
 ```json
 {
   "error": "Champs manquants: nom, telephone"
@@ -109,6 +116,7 @@ L'email envoyé contient :
 ```
 
 #### Configuration manquante (500)
+
 ```json
 {
   "error": "Configuration email manquante"
@@ -116,6 +124,7 @@ L'email envoyé contient :
 ```
 
 #### Erreur d'envoi (500)
+
 ```json
 {
   "error": "Erreur lors de l'envoi de la réservation",
@@ -126,6 +135,7 @@ L'email envoyé contient :
 ## Déploiement sur Vercel
 
 Ajouter les variables d'environnement dans Vercel :
+
 1. Aller dans `Settings > Environment Variables`
 2. Ajouter `GMAIL_USER` et `GMAIL_APP_PASSWORD`
 3. Redéployer l'application

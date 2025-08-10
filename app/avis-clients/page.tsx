@@ -5,7 +5,7 @@ import StructuredData from '../components/StructuredData'
 import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: "Avis clients | Témoignages",
+  title: 'Avis clients | Témoignages',
   description:
     "Découvrez les avis de nos clients satisfaits du service taxi aux Sables-d'Olonne. Service 5 étoiles, ponctuel et professionnel. ☎️ 06 25 19 31 43",
   keywords: [

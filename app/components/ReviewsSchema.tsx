@@ -33,7 +33,7 @@ export default function ReviewsSchema({
       bestRating: '5',
       worstRating: '1',
     },
-    review: reviews.map((review) => ({
+    review: reviews.map(review => ({
       '@type': 'Review',
       author: {
         '@type': 'Person',

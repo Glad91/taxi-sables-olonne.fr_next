@@ -5,7 +5,7 @@ import StructuredData from '../components/StructuredData'
 import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: "Aéroport Nantes | Transfert 230€",
+  title: 'Aéroport Nantes | Transfert 230€',
   description:
     "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, ponctuel et confortable. Tarif fixe 230€. ☎️ 06 25 19 31 43",
   keywords: [

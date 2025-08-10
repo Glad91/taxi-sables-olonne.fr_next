@@ -15,7 +15,7 @@ import FAQStructuredData, { taxiFAQItems } from './components/FAQStructuredData'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Taxi Sables-d'Olonne | Réservation 24h/24"
+    absolute: "Taxi Sables-d'Olonne | Réservation 24h/24",
   },
   description:
     "Taxi Sables-d'Olonne 24h/24. Gare SNCF 8€, aéroport Nantes 230€, VSL remboursé. Réservation immédiate ☎️ 06 25 19 31 43",
@@ -378,8 +378,9 @@ export default function Home() {
               Pourquoi nous choisir ? Notre expertise locale authentique
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              15 ans d'expérience aux Sables-d'Olonne nous donnent une connaissance approfondie 
-              de votre ville. Voici ce que notre expertise locale vous apporte concrètement.
+              15 ans d'expérience aux Sables-d'Olonne nous donnent une
+              connaissance approfondie de votre ville. Voici ce que notre
+              expertise locale vous apporte concrètement.
             </p>
           </div>
 
@@ -388,14 +389,18 @@ export default function Home() {
               <div className="text-blue-600 mb-4">
                 <Clock className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Connaissance des horaires SNCF</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Connaissance des horaires SNCF
+              </h3>
               <p className="text-gray-600 mb-4">
-                Nous connaissons parfaitement les horaires des trains TER et Intercités. 
-                Premier train à 5h43 vers Nantes, dernier retour à 22h37.
+                Nous connaissons parfaitement les horaires des trains TER et
+                Intercités. Premier train à 5h43 vers Nantes, dernier retour à
+                22h37.
               </p>
               <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded">
-                <strong>Info pratique :</strong> Les dimanches, fréquence réduite. 
-                Nous adaptons nos horaires de permanence en conséquence.
+                <strong>Info pratique :</strong> Les dimanches, fréquence
+                réduite. Nous adaptons nos horaires de permanence en
+                conséquence.
               </div>
             </div>
 
@@ -403,14 +408,18 @@ export default function Home() {
               <div className="text-blue-600 mb-4">
                 <MapPin className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Trajets optimisés localement</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Trajets optimisés localement
+              </h3>
               <p className="text-gray-600 mb-4">
-                Évitement automatique du Passage du Gois à marée haute, 
-                raccourcis par la route du Tour de France, anticipation des bouchons estivaux.
+                Évitement automatique du Passage du Gois à marée haute,
+                raccourcis par la route du Tour de France, anticipation des
+                bouchons estivaux.
               </p>
               <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded">
-                <strong>Exemple concret :</strong> En été, détour par Talmont-Saint-Hilaire 
-                pour éviter les embouteillages de La Chaume (gain de 15 min).
+                <strong>Exemple concret :</strong> En été, détour par
+                Talmont-Saint-Hilaire pour éviter les embouteillages de La
+                Chaume (gain de 15 min).
               </div>
             </div>
 
@@ -418,14 +427,16 @@ export default function Home() {
               <div className="text-blue-600 mb-4">
                 <Star className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Partenariats locaux établis</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Partenariats locaux établis
+              </h3>
               <p className="text-gray-600 mb-4">
-                Conventions avec l'Hôpital, collaboration avec les médecins pour le VSL, 
-                accords préférentiels avec 12 hôtels du centre-ville.
+                Conventions avec l'Hôpital, collaboration avec les médecins pour
+                le VSL, accords préférentiels avec 12 hôtels du centre-ville.
               </p>
               <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded">
-                <strong>Avantage client :</strong> Prise en charge directe depuis 
-                votre chambre d'hôtel sans attente en réception.
+                <strong>Avantage client :</strong> Prise en charge directe
+                depuis votre chambre d'hôtel sans attente en réception.
               </div>
             </div>
           </div>
@@ -440,30 +451,43 @@ export default function Home() {
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-blue-600">QUI</span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Qui sommes-nous ?</h4>
+                <h4 className="text-lg font-semibold mb-2">
+                  Qui sommes-nous ?
+                </h4>
                 <p className="text-gray-600 text-sm">
-                  Chauffeur professionnel agréé par la Préfecture de Vendée depuis 2009. 
-                  Licence taxi n°85-194-001. Formation continue obligatoire respectée.
+                  Chauffeur professionnel agréé par la Préfecture de Vendée
+                  depuis 2009. Licence taxi n°85-194-001. Formation continue
+                  obligatoire respectée.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl font-bold text-blue-600">COMMENT</span>
+                  <span className="text-xl font-bold text-blue-600">
+                    COMMENT
+                  </span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Comment procédons-nous ?</h4>
+                <h4 className="text-lg font-semibold mb-2">
+                  Comment procédons-nous ?
+                </h4>
                 <p className="text-gray-600 text-sm">
-                  Véhicule contrôlé techniquement tous les 6 mois. Assurance RC pro à jour. 
-                  Terminal CB certifié. Respect strict des tarifs préfectoraux.
+                  Véhicule contrôlé techniquement tous les 6 mois. Assurance RC
+                  pro à jour. Terminal CB certifié. Respect strict des tarifs
+                  préfectoraux.
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl font-bold text-blue-600">POURQUOI</span>
+                  <span className="text-xl font-bold text-blue-600">
+                    POURQUOI
+                  </span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Pourquoi nous faire confiance ?</h4>
+                <h4 className="text-lg font-semibold mb-2">
+                  Pourquoi nous faire confiance ?
+                </h4>
                 <p className="text-gray-600 text-sm">
-                  Notre mission : faciliter vos déplacements aux Sables-d'Olonne 
-                  avec un service fiable, ponctuel et transparent. Satisfaction client = notre priorité.
+                  Notre mission : faciliter vos déplacements aux Sables-d'Olonne
+                  avec un service fiable, ponctuel et transparent. Satisfaction
+                  client = notre priorité.
                 </p>
               </div>
             </div>

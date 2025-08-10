@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
-import { validateReservationData, formatPhoneNumber, type ReservationFormData } from '@/app/lib/validation'
+import {
+  validateReservationData,
+  formatPhoneNumber,
+  type ReservationFormData,
+} from '@/app/lib/validation'
 
 // Configuration du transporteur Gmail
 const createTransporter = () => {
@@ -418,11 +422,13 @@ const createEmailTemplate = (data: ReservationFormData) => {
                             <div class="info-icon icon-calendar">DATE</div>
                             <div class="info-content">
                                 <div class="info-label">Date de réservation</div>
-                                <div class="info-value">${new Date(data.dateReservation).toLocaleDateString('fr-FR', {
+                                <div class="info-value">${new Date(
+                                  data.dateReservation
+                                ).toLocaleDateString('fr-FR', {
                                   weekday: 'long',
                                   year: 'numeric',
                                   month: 'long',
-                                  day: 'numeric'
+                                  day: 'numeric',
                                 })}</div>
                             </div>
                         </div>
@@ -474,7 +480,9 @@ const createEmailTemplate = (data: ReservationFormData) => {
                 </div>
             </div>
             
-            ${data.informationsComplementaires ? `
+            ${
+              data.informationsComplementaires
+                ? `
             <div class="section">
                 <h2 class="section-title">Informations Complémentaires</h2>
                 <div class="additional-info">
@@ -482,7 +490,9 @@ const createEmailTemplate = (data: ReservationFormData) => {
                     <div class="additional-content">${data.informationsComplementaires}</div>
                 </div>
             </div>
-            ` : ''}
+            `
+                : ''
+            }
             
             <div class="section">
                 <div class="contact-section">
@@ -519,35 +529,37 @@ export async function POST(request: NextRequest) {
   try {
     // Parse des données de la requête
     const rawData = await request.json()
-    
+
     // Validation avec Zod
     const validation = validateReservationData(rawData)
-    
+
     if (!validation.success) {
       return NextResponse.json(
-        { 
+        {
           error: 'Données invalides',
-          details: validation.errors
+          details: validation.errors,
         },
         { status: 400 }
       )
     }
-    
+
     // TypeScript assertion: data ne peut pas être null ici car validation.success === true
     const data = validation.data as ReservationFormData
-    
+
     // Formatage du numéro de téléphone pour l'affichage
     const formattedPhone = formatPhoneNumber(data.telephone)
-    
+
     // Utiliser le numéro formaté dans les données
     const dataWithFormattedPhone = {
       ...data,
-      telephone: formattedPhone
+      telephone: formattedPhone,
     }
 
     // Vérification des variables d'environnement
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.error('Variables d\'environnement manquantes: GMAIL_USER ou GMAIL_APP_PASSWORD')
+      console.error(
+        "Variables d'environnement manquantes: GMAIL_USER ou GMAIL_APP_PASSWORD"
+      )
       return NextResponse.json(
         { error: 'Configuration email manquante' },
         { status: 500 }
@@ -586,20 +598,19 @@ Contacter immédiatement: ${dataWithFormattedPhone.telephone}
     await transporter.sendMail(mailOptions)
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Réservation envoyée avec succès' 
+      {
+        success: true,
+        message: 'Réservation envoyée avec succès',
       },
       { status: 200 }
     )
-
   } catch (error) {
-    console.error('Erreur lors de l\'envoi de l\'email:', error)
-    
+    console.error("Erreur lors de l'envoi de l'email:", error)
+
     return NextResponse.json(
-      { 
-        error: 'Erreur lors de l\'envoi de la réservation',
-        details: error instanceof Error ? error.message : 'Erreur inconnue'
+      {
+        error: "Erreur lors de l'envoi de la réservation",
+        details: error instanceof Error ? error.message : 'Erreur inconnue',
       },
       { status: 500 }
     )
