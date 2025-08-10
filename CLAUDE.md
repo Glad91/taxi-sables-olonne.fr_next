@@ -152,3 +152,5 @@ The site uses comprehensive structured data via `JsonLD.tsx`:
   - Thoroughly review and apply all recommended SEO techniques
   - Focus on implementing best practices for search engine discoverability
   - Ensure full compliance with Google's latest SEO guidelines
+
+- Avant chaque commit tu doit formatter le code avec prettier puis le linté puis npx tsc
