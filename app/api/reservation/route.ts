@@ -18,7 +18,7 @@ interface ReservationData {
 
 // Configuration du transporteur Gmail
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER,
@@ -354,7 +354,7 @@ export async function POST(request: NextRequest) {
     const data: ReservationData = await request.json()
     
     // Validation basique des données
-    const requiredFields = ['nom', 'prenom', 'telephone', 'email', 'dateReservation', 'heureReservation', 'lieuDepart', 'lieuArrivee']
+    const requiredFields: (keyof ReservationData)[] = ['nom', 'prenom', 'telephone', 'email', 'dateReservation', 'heureReservation', 'lieuDepart', 'lieuArrivee']
     const missingFields = requiredFields.filter(field => !data[field])
     
     if (missingFields.length > 0) {

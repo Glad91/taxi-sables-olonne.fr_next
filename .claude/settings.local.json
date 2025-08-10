@@ -28,7 +28,8 @@
       "WebFetch(domain:taxinextv2-5pprc6572-benjamins-projects-3b7732fa.vercel.app)",
       "WebFetch(domain:www.taxi-sables-olonne.fr)",
       "Bash(git revert:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": []
   }

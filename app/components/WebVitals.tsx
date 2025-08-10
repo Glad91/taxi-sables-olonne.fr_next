@@ -119,7 +119,7 @@ export function usePerformanceMonitoring() {
         download: navigation.responseEnd - navigation.responseStart,
         dom_processing:
           navigation.domContentLoadedEventStart - navigation.responseEnd,
-        total_load_time: navigation.loadEventStart - navigation.navigationStart,
+        total_load_time: navigation.loadEventStart - (navigation as any).navigationStart,
       }
 
       // Envoyer à Google Analytics
