@@ -28,7 +28,7 @@ export default function JsonLD({ data }: JsonLDProps) {
 // Schémas prédéfinis pour le site taxi
 export const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': ['LocalBusiness', 'TaxiService'],
   '@id': 'https://taxi-sables-olonne.fr/#organization',
   name: "Taxi Sables-d'Olonne",
   legalName: "Taxi Sables-d'Olonne",
@@ -106,6 +106,12 @@ export const organizationSchema = {
       },
     ],
   },
+  // LocalBusiness spécifique properties
+  priceRange: '€€',
+  currenciesAccepted: 'EUR',
+  paymentAccepted: ['Espèces', 'Carte bancaire', 'Chèque'],
+  knowsAbout: ['Transport de personnes', 'Transferts aéroports', 'Transport médical'],
+  
   // aggregateRating supprimé - données fictives risquent pénalité Google
   // À réactiver uniquement avec de vrais avis clients vérifiables
   sameAs: [
