@@ -149,7 +149,7 @@ export default function StructuredData({
         name: "Peut-on réserver un taxi pour l'aéroport de Nantes depuis les Sables-d'Olonne ?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Absolument. Le trajet Sables-d'Olonne → Aéroport Nantes dure environ 1h15 (98 km). Tarif fixe : 180€. Nous assurons le suivi de votre vol pour les arrivées. 73% de nos clients choisissent la réservation à l'avance pour ce trajet.",
+          text: "Absolument. Le trajet Sables-d'Olonne → Aéroport Nantes dure environ 1h30 (106 km). Tarif fixe : 230€. Nous assurons le suivi de votre vol pour les arrivées. 73% de nos clients choisissent la réservation à l'avance pour ce trajet.",
         },
       },
       {

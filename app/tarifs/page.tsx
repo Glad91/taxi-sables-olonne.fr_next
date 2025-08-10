@@ -7,7 +7,7 @@ import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 export const metadata: Metadata = {
   title: "Tarifs 2024 | Prix gare, aéroport, VSL",
   description:
-    "Tarifs taxi Sables-d'Olonne 2024 : gare SNCF 8€, aéroport Nantes 180€, transport médical VSL remboursé. Devis gratuit pour longue distance. ☎️ 06 25 19 31 43",
+    "Tarifs taxi Sables-d'Olonne 2024 : gare SNCF 8€, aéroport Nantes 230€, transport médical VSL remboursé. Devis gratuit pour longue distance. ☎️ 06 25 19 31 43",
   keywords: [
     "tarifs taxi sables d'olonne 2024",
     'prix taxi gare SNCF',
@@ -94,8 +94,8 @@ export default function TarifsPage() {
                   <span className="font-bold text-blue-600">330€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
-                  <span>Aéroport Nantes Atlantique - 80km</span>
-                  <span className="font-bold text-blue-600">180€</span>
+                  <span>Aéroport Nantes Atlantique - 106km</span>
+                  <span className="font-bold text-blue-600">230€</span>
                 </div>
                 <div className="flex justify-between items-center border-b pb-2">
                   <span>Nantes centre - 105km</span>

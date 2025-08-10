@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: "Taxi Sables-d'Olonne | Réservation 24h/24"
   },
   description:
-    "Taxi Sables-d'Olonne 24h/24. Gare SNCF 8€, aéroport Nantes 180€, VSL remboursé. Réservation immédiate ☎️ 06 25 19 31 43",
+    "Taxi Sables-d'Olonne 24h/24. Gare SNCF 8€, aéroport Nantes 230€, VSL remboursé. Réservation immédiate ☎️ 06 25 19 31 43",
   keywords: [
     "taxi sables d'olonne",
     "chauffeur privé sables d'olonne",
@@ -105,7 +105,7 @@ export default function Home() {
             <Link
               href="/aeroport-nantes"
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow group"
-              title="Taxi aéroport Nantes depuis Sables-d'Olonne - Tarif fixe 180€"
+              title="Taxi aéroport Nantes depuis Sables-d'Olonne - Tarif fixe 230€"
             >
               <div className="text-blue-600 mb-4 group-hover:text-blue-700">
                 <Car className="h-12 w-12" aria-hidden="true" />
@@ -115,7 +115,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-600">
                 Transfert confortable vers l'aéroport Nantes Atlantique avec
-                suivi de vol. Tarif fixe 180€.
+                suivi de vol. Tarif fixe 230€.
               </p>
             </Link>
 
@@ -293,7 +293,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 mb-3">
                   <strong>R :</strong> Absolument. Le trajet Sables-d'Olonne →
-                  Aéroport Nantes dure environ 1h15 (98 km). Tarif fixe : 180€.
+                  Aéroport Nantes dure environ 1h30 (106 km). Tarif fixe : 230€.
                   Nous assurons le suivi de votre vol pour les arrivées. 73% de
                   nos clients choisissent la réservation à l'avance pour ce
                   trajet.

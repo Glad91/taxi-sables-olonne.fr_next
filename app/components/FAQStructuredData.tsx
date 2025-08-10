@@ -38,7 +38,7 @@ export const taxiFAQItems: FAQItem[] = [
   {
     question: "Combien coûte un taxi aux Sables-d'Olonne ?",
     answer:
-      'Les tarifs suivent la réglementation préfectorale 2024 : prise en charge 2,90€ + 2,16€/km en journée. Tarifs fixes : gare SNCF 8€, aéroport Nantes 180€, centre-ville minimum 6€.',
+      'Les tarifs suivent la réglementation préfectorale 2024 : prise en charge 2,90€ + 2,16€/km en journée. Tarifs fixes : gare SNCF 8€, aéroport Nantes 230€, centre-ville minimum 6€.',
   },
   {
     question:
@@ -55,7 +55,7 @@ export const taxiFAQItems: FAQItem[] = [
     question:
       "Peut-on réserver un taxi pour l'aéroport de Nantes depuis les Sables-d'Olonne ?",
     answer:
-      "Absolument. Trajet Sables-d'Olonne → Aéroport Nantes : 1h15 (98 km), tarif fixe 180€. Suivi de vol pour les arrivées. Réservation à l'avance recommandée.",
+      "Absolument. Trajet Sables-d'Olonne → Aéroport Nantes : 1h30 (106 km), tarif fixe 230€. Suivi de vol pour les arrivées. Réservation à l'avance recommandée.",
   },
   {
     question:
