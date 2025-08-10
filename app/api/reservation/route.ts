@@ -124,65 +124,38 @@ const createEmailTemplate = (data: ReservationFormData) => {
         }
         
         .client-info {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .info-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            background: white;
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
             border-radius: 8px;
-            border: 1px solid #e5e7eb;
+            padding: 20px;
+            margin-bottom: 25px;
         }
         
-        .info-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
-            font-size: 14px;
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
         }
         
-        .icon-user { background: #dbeafe; color: #1e40af; }
-        .icon-phone { background: #dcfce7; color: #16a34a; }
-        .icon-email { background: #fef3c7; color: #d97706; }
-        .icon-calendar { background: #f3e8ff; color: #7c3aed; }
-        .icon-clock { background: #fce7f3; color: #be185d; }
-        .icon-users { background: #ecfccb; color: #65a30d; }
-        .icon-service { background: #fed7d7; color: #dc2626; }
+        .info-row {
+            border-bottom: 1px solid #e5e7eb;
+        }
         
-        .info-content {
-            flex: 1;
+        .info-row:last-child {
+            border-bottom: none;
         }
         
         .info-label {
-            font-size: 12px;
+            padding: 8px 12px 8px 0;
             font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
+            color: #374151;
+            font-size: 14px;
+            width: 30%;
         }
         
         .info-value {
-            font-size: 16px;
-            font-weight: 600;
+            padding: 8px 0;
             color: #1f2937;
+            font-size: 14px;
         }
         
         .trajet-section {
@@ -361,8 +334,17 @@ const createEmailTemplate = (data: ReservationFormData) => {
                 padding: 20px 15px;
             }
             
-            .info-grid {
-                grid-template-columns: 1fr;
+            .info-table {
+                font-size: 12px;
+            }
+            
+            .info-label {
+                width: 35%;
+                font-size: 12px;
+            }
+            
+            .info-value {
+                font-size: 12px;
             }
             
             .trajet-flow {
@@ -393,70 +375,43 @@ const createEmailTemplate = (data: ReservationFormData) => {
             <div class="section">
                 <h2 class="section-title">Informations Client</h2>
                 <div class="client-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <div class="info-icon icon-user">CLIENT</div>
-                            <div class="info-content">
-                                <div class="info-label">Nom complet</div>
-                                <div class="info-value">${data.prenom} ${data.nom}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon icon-phone">TÉL</div>
-                            <div class="info-content">
-                                <div class="info-label">Téléphone</div>
-                                <div class="info-value">${data.telephone}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon icon-email">EMAIL</div>
-                            <div class="info-content">
-                                <div class="info-label">Adresse email</div>
-                                <div class="info-value">${data.email}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon icon-calendar">DATE</div>
-                            <div class="info-content">
-                                <div class="info-label">Date de réservation</div>
-                                <div class="info-value">${new Date(
-                                  data.dateReservation
-                                ).toLocaleDateString('fr-FR', {
-                                  weekday: 'long',
-                                  year: 'numeric',
-                                  month: 'long',
-                                  day: 'numeric',
-                                })}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon icon-clock">HEURE</div>
-                            <div class="info-content">
-                                <div class="info-label">Heure de prise en charge</div>
-                                <div class="info-value">${data.heureReservation}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon icon-users">PAX</div>
-                            <div class="info-content">
-                                <div class="info-label">Nombre de passagers</div>
-                                <div class="info-value">${data.nombrePassagers} personne${parseInt(data.nombrePassagers) > 1 ? 's' : ''}</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon icon-service">SERVICE</div>
-                            <div class="info-content">
-                                <div class="info-label">Type de service</div>
-                                <div class="info-value">${data.typeService}</div>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="info-table">
+                        <tr class="info-row">
+                            <td class="info-label">Client :</td>
+                            <td class="info-value"><strong>${data.prenom} ${data.nom}</strong></td>
+                        </tr>
+                        <tr class="info-row">
+                            <td class="info-label">Téléphone :</td>
+                            <td class="info-value"><strong>${data.telephone}</strong></td>
+                        </tr>
+                        <tr class="info-row">
+                            <td class="info-label">Email :</td>
+                            <td class="info-value">${data.email}</td>
+                        </tr>
+                        <tr class="info-row">
+                            <td class="info-label">Date :</td>
+                            <td class="info-value">${new Date(
+                              data.dateReservation
+                            ).toLocaleDateString('fr-FR', {
+                              weekday: 'long',
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })}</td>
+                        </tr>
+                        <tr class="info-row">
+                            <td class="info-label">Heure :</td>
+                            <td class="info-value"><strong>${data.heureReservation}</strong></td>
+                        </tr>
+                        <tr class="info-row">
+                            <td class="info-label">Passagers :</td>
+                            <td class="info-value">${data.nombrePassagers} personne${parseInt(data.nombrePassagers) > 1 ? 's' : ''}</td>
+                        </tr>
+                        <tr class="info-row">
+                            <td class="info-label">Service :</td>
+                            <td class="info-value">${data.typeService}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             
