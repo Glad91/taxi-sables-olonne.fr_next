@@ -26,11 +26,20 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 ### 🚕 Services de Transport
 
 - **Taxi urbain** - Service 24h/24 dans Les Sables-d'Olonne
-- **Transferts aéroport** - Liaison Nantes-Atlantique ↔ Sables-d'Olonne
+- **Transferts aéroport** - Liaison Nantes-Atlantique ↔ Sables-d'Olonne (230€)
 - **Transferts gare SNCF** - Transport depuis/vers la gare des Sables
 - **Transport médical VSL** - Véhicule Sanitaire Léger conventionné
 - **Courses longue distance** - Déplacements régionaux
-- **Réservation en ligne** - Système de réservation intégré
+- **Réservation en ligne** - Système complet avec validation et emails automatiques
+
+### 📋 Système de Réservation Avancé
+
+- **Formulaire intelligent** - Validation en temps réel avec Zod
+- **API dédiée** - Route `/api/reservation` avec gestion d'erreurs complète
+- **Emails automatiques** - Templates HTML professionnels via Nodemailer
+- **Validation côté client** - Feedback instantané pour une UX optimale
+- **Gestion des erreurs** - Messages d'erreur personnalisés en français
+- **Confirmation par email** - Récapitulatif automatique envoyé au chauffeur
 
 ### 🎨 Interface Utilisateur
 
@@ -65,6 +74,13 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 - **[TypeScript 5](https://www.typescriptlang.org/)** - Typage statique JavaScript
 - **[Tailwind CSS 4.1.11](https://tailwindcss.com/)** - Framework CSS utilitaire
 
+### Backend & API
+
+- **[Zod](https://zod.dev/)** - Validation de schémas TypeScript
+- **[Nodemailer](https://nodemailer.com/)** - Envoi d'emails avec Gmail
+- **API Routes** - Routes serverless intégrées Next.js
+- **Gmail Integration** - Configuration App Password sécurisée
+
 ### Outils de Développement
 
 - **[ESLint 9](https://eslint.org/)** - Linter JavaScript/TypeScript
@@ -90,11 +106,17 @@ taxi-sables-olonne.fr_next/
 │   ├── 📄 not-found.tsx             # Page 404 personnalisée
 │   ├── 📄 globals.css               # Styles globaux Tailwind
 │   ├── 📄 sitemap.ts                # Génération sitemap
+│   ├── 📁 api/                      # API Routes serverless
+│   │   └── 📁 reservation/          # API réservation
+│   │       └── 📄 route.ts          # Endpoint POST avec email
+│   ├── 📁 lib/                      # Bibliothèques utilitaires
+│   │   └── 📄 validation.ts         # Schémas Zod et validation
 │   ├── 📁 components/               # Composants réutilisables
 │   │   ├── 📄 Header.tsx            # Navigation avec bouton mobile
 │   │   ├── 📄 Footer.tsx            # Pied de page
 │   │   ├── 📄 CallToAction.tsx      # Boutons d'action
 │   │   ├── 📄 Breadcrumb.tsx        # Fil d'Ariane navigation
+│   │   ├── 📄 ReservationForm.tsx   # Formulaire avec validation Zod
 │   │   ├── 📄 StructuredData.tsx    # Données structurées Schema.org
 │   │   ├── 📄 JsonLD.tsx            # Schémas JSON-LD
 │   │   ├── 📄 FAQStructuredData.tsx # FAQ données structurées
@@ -105,7 +127,7 @@ taxi-sables-olonne.fr_next/
 │   ├── 📁 tarifs/                   # Page tarifs harmonisés
 │   ├── 📁 reservation/              # Page réservation
 │   ├── 📁 contact/                  # Page contact
-│   ├── 📁 aeroport-nantes/          # Service aéroport (180€)
+│   ├── 📁 aeroport-nantes/          # Service aéroport (230€)
 │   ├── 📁 gare-sables-olonne/       # Service gare
 │   ├── 📁 longue-distance/          # Courses longue distance
 │   ├── 📁 transport-medical/        # VSL médical
@@ -123,6 +145,7 @@ taxi-sables-olonne.fr_next/
 ├── 📄 eslint.config.mjs             # Configuration ESLint
 ├── 📄 .prettierrc                   # Configuration Prettier
 ├── 📄 .prettierignore               # Fichiers ignorés Prettier
+├── 📄 API_RESERVATION.md            # Documentation API complète
 ├── 📄 CLAUDE.md                     # Documentation développement IA
 └── 📄 README.md                     # Documentation projet
 ```
@@ -187,6 +210,10 @@ pnpm lint             # Vérification ESLint
 pnpm lint:fix         # Correction automatique ESLint
 pnpm format           # Formatage avec Prettier
 pnpm format:check     # Vérification formatage
+
+# Test et Validation
+pnpm build            # Test du build production
+npx tsc --noEmit      # Vérification TypeScript
 ```
 
 ## 🔧 Configuration
@@ -200,6 +227,10 @@ Créer un fichier `.env.local` :
 NEXT_PUBLIC_SITE_URL=https://taxi-sables-olonne.fr
 NEXT_PUBLIC_PHONE=0625193143
 NEXT_PUBLIC_EMAIL=contact@taxi-sables-olonne.fr
+
+# Configuration Gmail pour réservations (obligatoire)
+GMAIL_USER=votre@gmail.com
+GMAIL_APP_PASSWORD=mot_de_passe_app_gmail
 
 # Analytics (optionnel)
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
@@ -257,9 +288,50 @@ pnpm export
 
 Configurer sur votre plateforme :
 
-- `NEXT_PUBLIC_SITE_URL`
-- `NEXT_PUBLIC_PHONE`
-- `NEXT_PUBLIC_EMAIL`
+**Obligatoires :**
+
+- `NEXT_PUBLIC_SITE_URL` - URL du site en production
+- `NEXT_PUBLIC_PHONE` - Numéro de téléphone du taxi
+- `GMAIL_USER` - Adresse Gmail pour recevoir les réservations
+- `GMAIL_APP_PASSWORD` - Mot de passe d'application Gmail
+
+**Optionnelles :**
+
+- `NEXT_PUBLIC_EMAIL` - Email public de contact
+- `NEXT_PUBLIC_GA_ID` - Google Analytics ID
+
+## 📧 API de Réservation
+
+### Configuration Gmail
+
+Le système de réservation utilise Gmail avec un **mot de passe d'application** :
+
+1. **Activer la validation en 2 étapes** sur votre compte Gmail
+2. **Générer un mot de passe d'application** :
+   - Aller dans Paramètres Google → Sécurité → Validation en 2 étapes
+   - Sélectionner "Mots de passe des applications"
+   - Choisir "Autre" et nommer "Taxi Website"
+   - Utiliser le mot de passe généré dans `GMAIL_APP_PASSWORD`
+
+### Fonctionnalités de l'API
+
+- **Route** : `POST /api/reservation`
+- **Validation** : Schéma Zod complet avec messages français
+- **Email HTML** : Template professionnel responsive
+- **Gestion d'erreurs** : Messages clairs côté client
+- **Types de données** : TypeScript strict
+- **Sécurité** : Validation serveur et client
+
+### Format Email
+
+L'email envoyé contient :
+
+- **Header professionnel** avec branding taxi
+- **Informations client** en tableau lisible
+- **Détails du trajet** avec points départ/arrivée
+- **Informations complémentaires** si renseignées
+- **Numéro clickable** pour appel direct
+- **Design responsive** pour mobile
 
 ## 📈 SEO et Optimisations
 
