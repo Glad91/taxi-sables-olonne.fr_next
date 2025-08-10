@@ -67,20 +67,14 @@ export default function GoogleTag({ gtag_id }: GoogleTagProps) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            (function() {
-              try {
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}', {
-                  anonymize_ip: true,
-                  cookie_flags: 'SameSite=None;Secure',
-                  send_page_view: true
-                });
-              } catch(e) {
-                console.warn('GoogleTag error:', e);
-              }
-            })();
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              anonymize_ip: true,
+              cookie_flags: 'SameSite=None;Secure',
+              send_page_view: true
+            });
           `,
         }}
       />
