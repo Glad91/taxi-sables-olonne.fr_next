@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
-import { Calendar, Clock, MapPin, Phone, User, Mail } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
 import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
+import ReservationForm from '../components/ReservationForm'
 
 export const metadata: Metadata = {
   title: "Réservation taxi en ligne | Taxi Sables-d'Olonne",
@@ -25,7 +25,7 @@ export default function ReservationPage() {
       <Breadcrumb items={breadcrumbConfigs['/reservation']} />
 
       <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Réservation de taxi en ligne
@@ -37,202 +37,7 @@ export default function ReservationPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-semibold mb-6">
-                Formulaire de réservation
-              </h2>
-
-              <form 
-                className="space-y-6" 
-                action="mailto:contact@taxi-sables-olonne.fr"
-                method="post"
-                encType="text/plain"
-                aria-label="Formulaire de réservation taxi"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="nom"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Nom complet *
-                    </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" aria-hidden="true" />
-                      <input
-                        type="text"
-                        id="nom"
-                        name="nom"
-                        required
-                        aria-describedby="nom-error"
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Votre nom"
-                        pattern="[A-Za-zÀ-ÿ\s]{2,50}"
-                        title="Nom complet requis (2-50 caractères)"
-                      />
-                      <div id="nom-error" className="text-red-500 text-xs mt-1 hidden" role="alert"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="telephone"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Téléphone *
-                    </label>
-                    <div className="relative">
-                      <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                      <input
-                        type="tel"
-                        id="telephone"
-                        required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="06 XX XX XX XX"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Email (optionnel)
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                      placeholder="votre@email.fr"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="date"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Date *
-                    </label>
-                    <div className="relative">
-                      <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                      <input
-                        type="date"
-                        id="date"
-                        required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="heure"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Heure *
-                    </label>
-                    <div className="relative">
-                      <Clock className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                      <input
-                        type="time"
-                        id="heure"
-                        required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="depart"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Adresse de départ *
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="depart"
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                      placeholder="Adresse de prise en charge"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="destination"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Destination *
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="destination"
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                      placeholder="Adresse de destination"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="passagers"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Nombre de passagers
-                  </label>
-                  <select
-                    id="passagers"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option value="1">1 passager</option>
-                    <option value="2">2 passagers</option>
-                    <option value="3">3 passagers</option>
-                    <option value="4">4 passagers</option>
-                    <option value="4+">Plus de 4 passagers</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="commentaires"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Commentaires ou instructions particulières
-                  </label>
-                  <textarea
-                    id="commentaires"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                    placeholder="Bagages, vol à surveiller, instructions particulières..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-                >
-                  Envoyer ma demande de réservation
-                </button>
-              </form>
-
-              <p className="text-sm text-gray-500 mt-4">
-                * Champs obligatoires. Votre réservation sera confirmée par
-                téléphone dans les plus brefs délais.
-              </p>
-            </div>
+            <ReservationForm />
 
             <div className="space-y-8">
               <div className="bg-gray-50 p-6 rounded-lg">

@@ -1,20 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
-
-// Interface pour les données de réservation
-interface ReservationData {
-  nom: string
-  prenom: string
-  telephone: string
-  email: string
-  dateReservation: string
-  heureReservation: string
-  lieuDepart: string
-  lieuArrivee: string
-  nombrePassagers: string
-  typeService: string
-  informationsComplementaires?: string
-}
+import { validateReservationData, formatPhoneNumber, type ReservationFormData } from '@/app/lib/validation'
 
 // Configuration du transporteur Gmail
 const createTransporter = () => {
@@ -28,7 +14,7 @@ const createTransporter = () => {
 }
 
 // Template HTML pour l'email
-const createEmailTemplate = (data: ReservationData) => {
+const createEmailTemplate = (data: ReservationFormData) => {
   return `
 <!DOCTYPE html>
 <html lang="fr">
@@ -351,17 +337,31 @@ const createEmailTemplate = (data: ReservationData) => {
 export async function POST(request: NextRequest) {
   try {
     // Parse des données de la requête
-    const data: ReservationData = await request.json()
+    const rawData = await request.json()
     
-    // Validation basique des données
-    const requiredFields: (keyof ReservationData)[] = ['nom', 'prenom', 'telephone', 'email', 'dateReservation', 'heureReservation', 'lieuDepart', 'lieuArrivee']
-    const missingFields = requiredFields.filter(field => !data[field])
+    // Validation avec Zod
+    const validation = validateReservationData(rawData)
     
-    if (missingFields.length > 0) {
+    if (!validation.success) {
       return NextResponse.json(
-        { error: `Champs manquants: ${missingFields.join(', ')}` },
+        { 
+          error: 'Données invalides',
+          details: validation.errors
+        },
         { status: 400 }
       )
+    }
+    
+    // TypeScript assertion: data ne peut pas être null ici car validation.success === true
+    const data = validation.data as ReservationFormData
+    
+    // Formatage du numéro de téléphone pour l'affichage
+    const formattedPhone = formatPhoneNumber(data.telephone)
+    
+    // Utiliser le numéro formaté dans les données
+    const dataWithFormattedPhone = {
+      ...data,
+      telephone: formattedPhone
     }
 
     // Vérification des variables d'environnement
@@ -380,24 +380,24 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: `"Site Web Taxi" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER, // Email de réception des réservations
-      subject: `🚕 NOUVELLE RÉSERVATION - ${data.prenom} ${data.nom} - ${new Date(data.dateReservation).toLocaleDateString('fr-FR')} à ${data.heureReservation}`,
-      html: createEmailTemplate(data),
+      subject: `🚕 NOUVELLE RÉSERVATION - ${dataWithFormattedPhone.prenom} ${dataWithFormattedPhone.nom} - ${new Date(dataWithFormattedPhone.dateReservation).toLocaleDateString('fr-FR')} à ${dataWithFormattedPhone.heureReservation}`,
+      html: createEmailTemplate(dataWithFormattedPhone),
       // Version texte de secours
       text: `
 NOUVELLE RÉSERVATION TAXI
 
-Client: ${data.prenom} ${data.nom}
-Téléphone: ${data.telephone}
-Email: ${data.email}
-Date: ${new Date(data.dateReservation).toLocaleDateString('fr-FR')}
-Heure: ${data.heureReservation}
-Trajet: ${data.lieuDepart} → ${data.lieuArrivee}
-Passagers: ${data.nombrePassagers}
-Service: ${data.typeService}
+Client: ${dataWithFormattedPhone.prenom} ${dataWithFormattedPhone.nom}
+Téléphone: ${dataWithFormattedPhone.telephone}
+Email: ${dataWithFormattedPhone.email}
+Date: ${new Date(dataWithFormattedPhone.dateReservation).toLocaleDateString('fr-FR')}
+Heure: ${dataWithFormattedPhone.heureReservation}
+Trajet: ${dataWithFormattedPhone.lieuDepart} → ${dataWithFormattedPhone.lieuArrivee}
+Passagers: ${dataWithFormattedPhone.nombrePassagers}
+Service: ${dataWithFormattedPhone.typeService}
 
-${data.informationsComplementaires ? `Informations: ${data.informationsComplementaires}` : ''}
+${dataWithFormattedPhone.informationsComplementaires ? `Informations: ${dataWithFormattedPhone.informationsComplementaires}` : ''}
 
-Contacter immédiatement: ${data.telephone}
+Contacter immédiatement: ${dataWithFormattedPhone.telephone}
       `,
     }
 
