@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import GoogleTag from './components/GoogleTag'
 import WebVitals from './components/WebVitals'
 import JsonLD, { organizationSchema, websiteSchema } from './components/JsonLD'
+import CriticalCSS from './components/CriticalCSS'
 
 export const metadata: Metadata = {
   title: {
@@ -77,6 +78,18 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
+          media="print" 
+          onLoad="this.media='all'" 
+        />
+        <noscript>
+          <link 
+            rel="stylesheet" 
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
+          />
+        </noscript>
         <link rel="canonical" href="https://taxi-sables-olonne.fr" />
         <meta name="geo.region" content="FR-85" />
         <meta name="geo.placename" content="Les Sables-d'Olonne" />
@@ -84,6 +97,7 @@ export default function RootLayout({
         <meta name="ICBM" content="46.496002, -1.783313" />
         <JsonLD data={organizationSchema} />
         <JsonLD data={websiteSchema} />
+        <CriticalCSS />
       </head>
       <body className="antialiased">
         <GoogleTag />

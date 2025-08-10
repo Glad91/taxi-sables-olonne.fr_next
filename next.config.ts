@@ -83,6 +83,17 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
   },
+  
+  // Server-side optimizations
+  async rewrites() {
+    return [
+      // CDN rewrites pour optimiser les ressources statiques
+      {
+        source: '/fonts/:path*',
+        destination: 'https://fonts.gstatic.com/:path*',
+      },
+    ]
+  },
 }
 
 export default nextConfig
