@@ -15,7 +15,9 @@ declare global {
 }
 
 export default function GoogleTag({ gtag_id }: GoogleTagProps) {
-  const GA_TRACKING_ID = gtag_id || process.env.NEXT_PUBLIC_GA_TRACKING_ID
+  // Nettoyer l'ID pour éviter les caractères de saut de ligne
+  const rawId = gtag_id || process.env.NEXT_PUBLIC_GA_TRACKING_ID || ''
+  const GA_TRACKING_ID = rawId.trim().replace(/[\r\n\t]/g, '')
 
   useEffect(() => {
     if (!GA_TRACKING_ID || process.env.NODE_ENV !== 'production') {
@@ -66,6 +68,7 @@ export default function GoogleTag({ gtag_id }: GoogleTagProps) {
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
+<<<<<<< Updated upstream
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -76,6 +79,22 @@ export default function GoogleTag({ gtag_id }: GoogleTagProps) {
               send_page_view: true
             });
           `,
+=======
+          __html: `(function() {
+try {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${GA_TRACKING_ID}', {
+    anonymize_ip: true,
+    cookie_flags: 'SameSite=None;Secure',
+    send_page_view: true
+  });
+} catch(e) {
+  console.warn('GoogleTag error:', e);
+}
+})();`,
+>>>>>>> Stashed changes
         }}
       />
     </>
