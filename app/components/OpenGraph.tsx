@@ -9,7 +9,7 @@ interface OpenGraphProps {
 export default function OpenGraph({
   title = "Taxi Sables-d'Olonne | Service 24h/24 - 7j/7",
   description = "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical VSL. ☎️ 06 25 19 31 43",
-  image = 'https://taxi-sables-olonne.fr/og-image.jpg',
+  image = 'https://taxi-sables-olonne.fr/og-image.png',
   url = 'https://taxi-sables-olonne.fr',
   type = 'business.business',
 }: OpenGraphProps) {
