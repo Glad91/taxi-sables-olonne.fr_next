@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: "Contact | Taxi Sables-d'Olonne - 06 25 19 31 43",
@@ -17,6 +18,7 @@ export default function ContactPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
+      <Breadcrumb items={breadcrumbConfigs['/contact']} />
 
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

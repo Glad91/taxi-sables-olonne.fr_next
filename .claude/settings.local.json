@@ -22,7 +22,8 @@
       "WebFetch(domain:developers.google.com)",
       "Bash(pnpm lint:*)",
       "Bash(pnpm format:*)",
-      "WebFetch(domain:taxinextv2.vercel.app)"
+      "WebFetch(domain:taxinextv2.vercel.app)",
+      "Bash(vercel:*)"
     ],
     "deny": []
   }

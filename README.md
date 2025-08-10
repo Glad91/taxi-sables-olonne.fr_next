@@ -38,6 +38,7 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 - **Interface moderne** - Design épuré avec Tailwind CSS v4
 - **Bouton d'appel mobile** - Accès direct au téléphone depuis le header
 - **Navigation optimisée** - Menu hamburger avec call-to-action intégré
+- **Fil d'Ariane** - Navigation breadcrumb sur toutes les pages
 - **Accessibilité** - Respect des standards WCAG
 - **Performance** - Chargement rapide et optimisé
 
@@ -46,12 +47,14 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 - **Schema.org** - Données structurées (TaxiService, LocalBusiness, FAQ)
 - **Open Graph** - Optimisation partage réseaux sociaux et WhatsApp
 - **Web Vitals** - Monitoring performance en temps réel
+- **Sitemap optimisé** - URLs dynamiques pour environnements Vercel
 - **Page 404 personnalisée** - Expérience utilisateur optimisée
 - **Pages légales** - Mentions légales et maintenance
 - **GEO optimisé** - Optimisation pour les moteurs de recherche IA
 - **Contenu E-E-A-T** - Expertise, Expérience, Autorité, Fiabilité
 - **Citations et sources** - Références officielles et statistiques
 - **FAQ structurées** - Questions-réponses optimisées
+- **JSON-LD dans head** - Placement optimal selon Google Search Central
 
 ## 🛠️ Technologies
 
@@ -71,9 +74,10 @@ Site web moderne et optimisé pour le service de taxi aux Sables-d'Olonne, déve
 - **[Critters](https://github.com/GoogleChromeLabs/critters)** - CSS critique inline
 - **[pnpm](https://pnpm.io/)** - Gestionnaire de paquets
 
-### Déploiement
+### Déploiement & Configuration
 
 - **[Vercel](https://vercel.com/)** - Plateforme de déploiement recommandée
+- **vercel.json** - Configuration optimisée pour déploiement
 - **GitHub Actions** - CI/CD automatisé
 
 ## 📁 Structure du Projet
@@ -90,9 +94,13 @@ taxi-sables-olonne.fr_next/
 │   │   ├── 📄 Header.tsx            # Navigation avec bouton mobile
 │   │   ├── 📄 Footer.tsx            # Pied de page
 │   │   ├── 📄 CallToAction.tsx      # Boutons d'action
+│   │   ├── 📄 Breadcrumb.tsx        # Fil d'Ariane navigation
 │   │   ├── 📄 StructuredData.tsx    # Données structurées Schema.org
 │   │   ├── 📄 JsonLD.tsx            # Schémas JSON-LD
+│   │   ├── 📄 FAQStructuredData.tsx # FAQ données structurées
 │   │   ├── 📄 OpenGraph.tsx         # Métadonnées Open Graph
+│   │   ├── 📄 SEOHead.tsx           # Composant SEO centralisé
+│   │   ├── 📄 GoogleTag.tsx         # Google Analytics integration
 │   │   └── 📄 WebVitals.tsx         # Monitoring performance
 │   ├── 📁 tarifs/                   # Page tarifs harmonisés
 │   ├── 📁 reservation/              # Page réservation
@@ -261,8 +269,9 @@ Configurer sur votre plateforme :
 - **LocalBusiness** - Entreprise locale géolocalisée
 - **FAQPage** - Questions fréquentes optimisées IA
 - **WebSite** - Site web avec SearchAction
-- **BreadcrumbList** - Navigation structurée
+- **BreadcrumbList** - Navigation hiérarchique structurée
 - **Service** - Services spécifiques par page
+- **JSON-LD placement** - Dans `<head>` selon recommandations Google
 
 ### Optimisations GEO (Generative Engine Optimization)
 
@@ -272,15 +281,17 @@ Configurer sur votre plateforme :
 - **Format Q&A** - Questions-réponses structurées
 - **Contexte géographique** - Sables-d'Olonne et région
 
-### Performance
+### Performance & Optimisations
 
 - **Core Web Vitals** monitoring temps réel (WebVitals.tsx)
 - **Headers de performance** et cache optimisés
 - **Images optimisées** avec Next.js Image (WebP/AVIF)
 - **CSS critique** inline avec Critters
 - **Turbopack** pour développement ultra-rapide
+- **Sitemap dynamique** optimisé pour environnements Vercel
 - **Lazy loading** automatique
 - **Bundle splitting** intelligent
+- **SEO complet** selon Google Developers guidelines
 
 ### Accessibilité
 

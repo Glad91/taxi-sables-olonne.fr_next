@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Calendar, Clock, MapPin, Phone, User, Mail } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: "Réservation taxi en ligne | Taxi Sables-d'Olonne",
@@ -21,6 +22,7 @@ export default function ReservationPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
+      <Breadcrumb items={breadcrumbConfigs['/reservation']} />
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

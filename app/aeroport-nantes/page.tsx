@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Plane, Clock, MapPin, Phone, Car } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: "Taxi Aéroport Nantes Atlantique | Transfert Sables-d'Olonne",
@@ -22,6 +23,7 @@ export default function AeroportPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
+      <Breadcrumb items={breadcrumbConfigs['/aeroport-nantes']} />
 
       <section className="bg-gradient-to-br from-sky-600 to-sky-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { MapPin, Clock, Phone, Calculator } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title:
@@ -23,6 +24,7 @@ export default function LongueDistancePage() {
   return (
     <>
       <StructuredData type="TaxiService" />
+      <Breadcrumb items={breadcrumbConfigs['/longue-distance']} />
 
       <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

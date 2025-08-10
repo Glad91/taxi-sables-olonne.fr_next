@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Star, User, Quote, Phone } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: "Avis clients | Témoignages Taxi Sables-d'Olonne",
@@ -110,6 +111,7 @@ export default function AvisClientsPage() {
   return (
     <>
       <StructuredData data={reviewSchema} />
+      <Breadcrumb items={breadcrumbConfigs['/avis-clients']} />
 
       <section className="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

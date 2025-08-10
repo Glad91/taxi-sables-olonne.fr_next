@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Heart, Shield, Clock, Phone } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: "Transport médical VSL | Taxi conventionné Sables-d'Olonne",
@@ -22,6 +23,7 @@ export default function TransportMedicalPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
+      <Breadcrumb items={breadcrumbConfigs['/transport-medical']} />
 
       <section className="bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

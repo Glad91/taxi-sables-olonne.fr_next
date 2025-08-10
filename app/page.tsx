@@ -368,6 +368,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Expertise Locale Section - Conforme Google Helpful Content */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Pourquoi nous choisir ? Notre expertise locale authentique
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              15 ans d'expérience aux Sables-d'Olonne nous donnent une connaissance approfondie 
+              de votre ville. Voici ce que notre expertise locale vous apporte concrètement.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-blue-600 mb-4">
+                <Clock className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Connaissance des horaires SNCF</h3>
+              <p className="text-gray-600 mb-4">
+                Nous connaissons parfaitement les horaires des trains TER et Intercités. 
+                Premier train à 5h43 vers Nantes, dernier retour à 22h37.
+              </p>
+              <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded">
+                <strong>Info pratique :</strong> Les dimanches, fréquence réduite. 
+                Nous adaptons nos horaires de permanence en conséquence.
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-blue-600 mb-4">
+                <MapPin className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Trajets optimisés localement</h3>
+              <p className="text-gray-600 mb-4">
+                Évitement automatique du Passage du Gois à marée haute, 
+                raccourcis par la route du Tour de France, anticipation des bouchons estivaux.
+              </p>
+              <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded">
+                <strong>Exemple concret :</strong> En été, détour par Talmont-Saint-Hilaire 
+                pour éviter les embouteillages de La Chaume (gain de 15 min).
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-blue-600 mb-4">
+                <Star className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Partenariats locaux établis</h3>
+              <p className="text-gray-600 mb-4">
+                Conventions avec l'Hôpital, collaboration avec les médecins pour le VSL, 
+                accords préférentiels avec 12 hôtels du centre-ville.
+              </p>
+              <div className="text-sm text-gray-500 bg-gray-50 p-3 rounded">
+                <strong>Avantage client :</strong> Prise en charge directe depuis 
+                votre chambre d'hôtel sans attente en réception.
+              </div>
+            </div>
+          </div>
+
+          {/* Transparence sur le service - Principe Google "Qui/Comment/Pourquoi" */}
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-gray-900">
+              Transparence totale sur notre service
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-blue-600">QUI</span>
+                </div>
+                <h4 className="text-lg font-semibold mb-2">Qui sommes-nous ?</h4>
+                <p className="text-gray-600 text-sm">
+                  Chauffeur professionnel agréé par la Préfecture de Vendée depuis 2009. 
+                  Licence taxi n°85-194-001. Formation continue obligatoire respectée.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl font-bold text-blue-600">COMMENT</span>
+                </div>
+                <h4 className="text-lg font-semibold mb-2">Comment procédons-nous ?</h4>
+                <p className="text-gray-600 text-sm">
+                  Véhicule contrôlé techniquement tous les 6 mois. Assurance RC pro à jour. 
+                  Terminal CB certifié. Respect strict des tarifs préfectoraux.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl font-bold text-blue-600">POURQUOI</span>
+                </div>
+                <h4 className="text-lg font-semibold mb-2">Pourquoi nous faire confiance ?</h4>
+                <p className="text-gray-600 text-sm">
+                  Notre mission : faciliter vos déplacements aux Sables-d'Olonne 
+                  avec un service fiable, ponctuel et transparent. Satisfaction client = notre priorité.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Local Coverage Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

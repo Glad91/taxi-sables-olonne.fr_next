@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Euro, MapPin, Phone } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: "Tarifs Taxi Sables-d'Olonne 2024 | Prix gare, aéroport, VSL",
@@ -24,6 +25,7 @@ export default function TarifsPage() {
   return (
     <>
       <StructuredData type="TaxiService" />
+      <Breadcrumb items={breadcrumbConfigs['/tarifs']} />
 
       <section className="bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import CallToAction from '../components/CallToAction'
 import StructuredData from '../components/StructuredData'
+import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
   title:
@@ -32,6 +33,7 @@ export default function GuideTaxiPage() {
   return (
     <>
       <StructuredData type="FAQ" />
+      <Breadcrumb items={breadcrumbConfigs['/guide-taxi-sables-olonne']} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
