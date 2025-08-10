@@ -283,7 +283,7 @@ export default function ReservationPage() {
                     <strong>Gare SNCF :</strong> À partir de 8€
                   </p>
                   <p>
-                    <strong>Centre-ville :</strong> À partir de 6€
+                    <strong>Centre-ville :</strong> À partir de 8€
                   </p>
                   <p>
                     <strong>Aéroport Nantes :</strong> À partir de 230€
