@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Guide complet du taxi aux Sables-d'Olonne 2024",
     description: "Guide pratique complet : tarifs officiels 2024, délais, paiement CB, transport médical VSL. Toutes les réponses aux Sables-d'Olonne.",
-    url: 'https://taxi-sables-olonne.fr/guide-taxi-sables-olonne',
+    url: 'https://www.taxi-sables-olonne.fr/guide-taxi-sables-olonne',
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Guide taxi Sables-d\'Olonne 2024 - Tarifs, horaires et réservation',
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
   twitter: {
     title: "Guide complet du taxi aux Sables-d'Olonne 2024",
     description: "Guide pratique : tarifs 2024, délais, paiement, transport VSL. Toutes les infos taxi Sables-d'Olonne.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/guide-taxi-sables-olonne',
+    canonical: 'https://www.taxi-sables-olonne.fr/guide-taxi-sables-olonne',
   },
 }
 

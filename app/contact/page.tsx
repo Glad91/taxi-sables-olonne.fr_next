@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | Taxi Sables-d'Olonne - 06 25 19 31 43",
     description: "Contactez Taxi Sables-d'Olonne : ☎️ 06 25 19 31 43, 📧 contact@taxi-sables-olonne.fr, 📍 Place Napoléon III. Service 24h/24.",
-    url: 'https://taxi-sables-olonne.fr/contact',
+    url: 'https://www.taxi-sables-olonne.fr/contact',
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Contact Taxi Sables-d\'Olonne - Informations de contact et localisation',
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   twitter: {
     title: "Contact | Taxi Sables-d'Olonne - 06 25 19 31 43",
     description: "Contactez Taxi Sables-d'Olonne : ☎️ 06 25 19 31 43, 📧 contact@taxi-sables-olonne.fr, Place Napoléon III.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/contact',
+    canonical: 'https://www.taxi-sables-olonne.fr/contact',
   },
 }
 

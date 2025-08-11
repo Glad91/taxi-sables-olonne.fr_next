@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Taxi longue distance | Sables-d'Olonne vers Nantes, Bordeaux",
     description: "Service taxi longue distance depuis Les Sables-d'Olonne vers Nantes, La Roche-sur-Yon, Bordeaux et toute la France. Devis gratuit.",
-    url: 'https://taxi-sables-olonne.fr/longue-distance',
+    url: 'https://www.taxi-sables-olonne.fr/longue-distance',
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Taxi longue distance Sables-d\'Olonne - Service vers toute la France',
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
   twitter: {
     title: "Taxi longue distance | Sables-d'Olonne vers Nantes, Bordeaux",
     description: "Service taxi longue distance depuis Les Sables-d'Olonne. Devis gratuit vers toute la France.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/longue-distance',
+    canonical: 'https://www.taxi-sables-olonne.fr/longue-distance',
   },
 }
 

@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://taxi-sables-olonne.fr',
+    url: 'https://www.taxi-sables-olonne.fr',
     siteName: "Taxi Sables-d'Olonne",
     title: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24",
     description:
       "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical.",
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: "Taxi Sables-d'Olonne - Service de taxi professionnel",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24",
     description:
       "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   robots: {
     index: true,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code',
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr',
+    canonical: 'https://www.taxi-sables-olonne.fr',
   },
 }
 

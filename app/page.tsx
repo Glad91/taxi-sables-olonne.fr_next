@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'taxi 24h/24',
   ],
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr',
+    canonical: 'https://www.taxi-sables-olonne.fr',
   },
 }
 

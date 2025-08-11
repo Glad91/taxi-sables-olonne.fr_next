@@ -14,7 +14,7 @@ export default function SEOHead({
   description,
   keywords = "taxi sables d'olonne, chauffeur privé, transport",
   canonical,
-  ogImage = 'https://taxi-sables-olonne.fr/og-image.jpg',
+  ogImage = 'https://www.taxi-sables-olonne.fr/og-image.jpg',
   structuredData,
 }: SEOHeadProps) {
   return (
@@ -29,7 +29,7 @@ export default function SEOHead({
       <meta property="og:image" content={ogImage} />
       <meta
         property="og:url"
-        content={canonical || 'https://taxi-sables-olonne.fr'}
+        content={canonical || 'https://www.taxi-sables-olonne.fr'}
       />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="fr_FR" />

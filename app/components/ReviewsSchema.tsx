@@ -25,7 +25,7 @@ export default function ReviewsSchema({
   const reviewsSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://taxi-sables-olonne.fr/#organization',
+    '@id': 'https://www.taxi-sables-olonne.fr/#organization',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: averageRating.toString(),

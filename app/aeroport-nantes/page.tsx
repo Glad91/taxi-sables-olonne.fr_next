@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Taxi Aéroport Nantes | Transfert 230€ depuis Sables-d'Olonne",
     description: "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, ponctuel et confortable. Tarif fixe 230€.",
-    url: 'https://taxi-sables-olonne.fr/aeroport-nantes',
+    url: 'https://www.taxi-sables-olonne.fr/aeroport-nantes',
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Taxi Aéroport Nantes - Service de transfert professionnel',
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
   twitter: {
     title: "Taxi Aéroport Nantes | Transfert 230€ depuis Sables-d'Olonne",
     description: "Transfert taxi vers l'aéroport Nantes Atlantique depuis Les Sables-d'Olonne. Service avec suivi de vol, tarif fixe 230€.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/aeroport-nantes',
+    canonical: 'https://www.taxi-sables-olonne.fr/aeroport-nantes',
   },
 }
 

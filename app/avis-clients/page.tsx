@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Avis clients | Témoignages taxi Sables-d'Olonne",
     description: "Découvrez les avis de nos clients satisfaits du service taxi aux Sables-d'Olonne. Service 5 étoiles, ponctuel et professionnel.",
-    url: 'https://taxi-sables-olonne.fr/avis-clients',
+    url: 'https://www.taxi-sables-olonne.fr/avis-clients',
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Avis clients Taxi Sables-d\'Olonne - Témoignages de satisfaction',
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
   twitter: {
     title: "Avis clients | Témoignages taxi Sables-d'Olonne",
     description: "Découvrez les avis de nos clients satisfaits. Service taxi 5 étoiles aux Sables-d'Olonne.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/avis-clients',
+    canonical: 'https://www.taxi-sables-olonne.fr/avis-clients',
   },
 }
 

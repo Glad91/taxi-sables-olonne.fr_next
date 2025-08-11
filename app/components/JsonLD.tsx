@@ -29,15 +29,15 @@ export default function JsonLD({ data }: JsonLDProps) {
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'TaxiService'],
-  '@id': 'https://taxi-sables-olonne.fr/#organization',
+  '@id': 'https://www.taxi-sables-olonne.fr/#organization',
   name: "Taxi Sables-d'Olonne",
   legalName: "Taxi Sables-d'Olonne",
-  url: 'https://taxi-sables-olonne.fr',
-  logo: 'https://taxi-sables-olonne.fr/logo.png',
+  url: 'https://www.taxi-sables-olonne.fr',
+  logo: 'https://www.taxi-sables-olonne.fr/logo.png',
   image: [
-    'https://taxi-sables-olonne.fr/taxi-sables-olonne-vehicule.jpg',
-    'https://taxi-sables-olonne.fr/taxi-sables-olonne-service.jpg',
-    'https://taxi-sables-olonne.fr/logo.png',
+    'https://www.taxi-sables-olonne.fr/taxi-sables-olonne-vehicule.jpg',
+    'https://www.taxi-sables-olonne.fr/taxi-sables-olonne-service.jpg',
+    'https://www.taxi-sables-olonne.fr/logo.png',
   ],
   description:
     "Service de taxi professionnel aux Sables-d'Olonne disponible 24h/24 et 7j/7. Transferts aéroport, gare SNCF, transport médical VSL.",
@@ -133,19 +133,19 @@ export const organizationSchema = {
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': 'https://taxi-sables-olonne.fr/#website',
-  url: 'https://taxi-sables-olonne.fr',
+  '@id': 'https://www.taxi-sables-olonne.fr/#website',
+  url: 'https://www.taxi-sables-olonne.fr',
   name: "Taxi Sables-d'Olonne",
   description: "Site officiel du service de taxi aux Sables-d'Olonne",
   publisher: {
-    '@id': 'https://taxi-sables-olonne.fr/#organization',
+    '@id': 'https://www.taxi-sables-olonne.fr/#organization',
   },
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
       urlTemplate:
-        'https://taxi-sables-olonne.fr/search?q={search_term_string}',
+        'https://www.taxi-sables-olonne.fr/search?q={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },
@@ -175,7 +175,7 @@ export const serviceSchema = (
   name: serviceName,
   description: description,
   provider: {
-    '@id': 'https://taxi-sables-olonne.fr/#organization',
+    '@id': 'https://www.taxi-sables-olonne.fr/#organization',
   },
   areaServed: {
     '@type': 'City',

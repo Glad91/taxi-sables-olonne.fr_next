@@ -15,7 +15,7 @@ interface BreadcrumbProps {
 export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   // Toujours inclure l'accueil en premier
   const allItems = [
-    { name: 'Accueil', url: 'https://taxi-sables-olonne.fr' },
+    { name: 'Accueil', url: 'https://www.taxi-sables-olonne.fr' },
     ...items,
   ]
 
@@ -71,7 +71,7 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
                     // Pages intermédiaires - Liens stylisés
                     <Link
                       href={item.url.replace(
-                        'https://taxi-sables-olonne.fr',
+                        'https://www.taxi-sables-olonne.fr',
                         ''
                       )}
                       className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 hover:text-taxi-orange hover:bg-taxi-yellow/5 rounded-lg transition-all duration-200 truncate"
@@ -97,55 +97,55 @@ export const breadcrumbConfigs = {
   '/gare-sables-olonne': [
     {
       name: "Taxi Gare SNCF Sables-d'Olonne",
-      url: 'https://taxi-sables-olonne.fr/gare-sables-olonne',
+      url: 'https://www.taxi-sables-olonne.fr/gare-sables-olonne',
     },
   ],
   '/aeroport-nantes': [
     {
       name: 'Taxi Aéroport Nantes',
-      url: 'https://taxi-sables-olonne.fr/aeroport-nantes',
+      url: 'https://www.taxi-sables-olonne.fr/aeroport-nantes',
     },
   ],
   '/transport-medical': [
     {
       name: 'Transport Médical VSL',
-      url: 'https://taxi-sables-olonne.fr/transport-medical',
+      url: 'https://www.taxi-sables-olonne.fr/transport-medical',
     },
   ],
   '/longue-distance': [
     {
       name: 'Taxi Longue Distance',
-      url: 'https://taxi-sables-olonne.fr/longue-distance',
+      url: 'https://www.taxi-sables-olonne.fr/longue-distance',
     },
   ],
   '/tarifs': [
     {
       name: 'Tarifs Taxi 2024',
-      url: 'https://taxi-sables-olonne.fr/tarifs',
+      url: 'https://www.taxi-sables-olonne.fr/tarifs',
     },
   ],
   '/reservation': [
     {
       name: 'Réservation Taxi en Ligne',
-      url: 'https://taxi-sables-olonne.fr/reservation',
+      url: 'https://www.taxi-sables-olonne.fr/reservation',
     },
   ],
   '/contact': [
     {
       name: 'Contact Taxi',
-      url: 'https://taxi-sables-olonne.fr/contact',
+      url: 'https://www.taxi-sables-olonne.fr/contact',
     },
   ],
   '/avis-clients': [
     {
       name: 'Avis Clients',
-      url: 'https://taxi-sables-olonne.fr/avis-clients',
+      url: 'https://www.taxi-sables-olonne.fr/avis-clients',
     },
   ],
   '/guide-taxi-sables-olonne': [
     {
       name: 'Guide Taxi Complet',
-      url: 'https://taxi-sables-olonne.fr/guide-taxi-sables-olonne',
+      url: 'https://www.taxi-sables-olonne.fr/guide-taxi-sables-olonne',
     },
   ],
 }

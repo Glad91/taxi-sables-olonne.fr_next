@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Transport médical VSL | Remboursé Sécurité Sociale",
     description: "Transport médical assis VSL conventionné aux Sables-d'Olonne. Prise en charge Sécurité Sociale pour vos rendez-vous médicaux.",
-    url: 'https://taxi-sables-olonne.fr/transport-medical',
+    url: 'https://www.taxi-sables-olonne.fr/transport-medical',
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        url: 'https://www.taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Transport médical VSL Sables-d\'Olonne - Service conventionné remboursé',
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
   twitter: {
     title: "Transport médical VSL | Remboursé Sécurité Sociale",
     description: "Transport médical VSL conventionné aux Sables-d'Olonne. Prise en charge Sécurité Sociale pour vos RDV médicaux.",
-    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+    images: ['https://www.taxi-sables-olonne.fr/og-image.png'],
   },
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/transport-medical',
+    canonical: 'https://www.taxi-sables-olonne.fr/transport-medical',
   },
 }
 

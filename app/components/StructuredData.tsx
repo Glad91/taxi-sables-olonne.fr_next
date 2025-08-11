@@ -13,7 +13,7 @@ export default function StructuredData({
     name: "Taxi Sables-d'Olonne",
     description:
       "Service de taxi professionnel aux Sables-d'Olonne et ses alentours. Disponible 24h/24 et 7j/7 pour tous vos déplacements.",
-    url: 'https://taxi-sables-olonne.fr',
+    url: 'https://www.taxi-sables-olonne.fr',
     telephone: '+33625193143',
     email: 'contact@taxi-sables-olonne.fr',
     address: {
@@ -89,7 +89,7 @@ export default function StructuredData({
       '@type': 'Person',
       name: "Taxi Sables-d'Olonne",
     },
-    sameAs: ['https://taxi-sables-olonne.fr'],
+    sameAs: ['https://www.taxi-sables-olonne.fr'],
   })
 
   const getLocalBusinessSchema = () => ({
@@ -97,7 +97,7 @@ export default function StructuredData({
     '@type': 'LocalBusiness',
     name: "Taxi Sables-d'Olonne",
     description: "Service de taxi professionnel aux Sables-d'Olonne",
-    url: 'https://taxi-sables-olonne.fr',
+    url: 'https://www.taxi-sables-olonne.fr',
     telephone: '+33625193143',
     email: 'contact@taxi-sables-olonne.fr',
     address: {

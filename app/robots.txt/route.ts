@@ -2,7 +2,7 @@ export async function GET() {
   const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: https://taxi-sables-olonne.fr/sitemap.xml
+Sitemap: https://www.taxi-sables-olonne.fr/sitemap.xml
 
 # Pages importantes
 Allow: /

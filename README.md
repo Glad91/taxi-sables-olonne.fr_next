@@ -224,7 +224,7 @@ Créer un fichier `.env.local` :
 
 ```env
 # Configuration Next.js
-NEXT_PUBLIC_SITE_URL=https://taxi-sables-olonne.fr
+NEXT_PUBLIC_SITE_URL=https://www.taxi-sables-olonne.fr
 NEXT_PUBLIC_PHONE=0625193143
 NEXT_PUBLIC_EMAIL=contact@taxi-sables-olonne.fr
 
@@ -405,7 +405,7 @@ L'email envoyé contient :
 
 - **📞 Téléphone** : [06 25 19 31 43](tel:0625193143)
 - **📍 Adresse** : Place Napoléon III, 85100 Les Sables-d'Olonne
-- **🌐 Site Web** : [taxi-sables-olonne.fr](https://taxi-sables-olonne.fr)
+- **🌐 Site Web** : [taxi-sables-olonne.fr](https://www.taxi-sables-olonne.fr)
 
 ### Développement
 

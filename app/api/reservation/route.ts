@@ -468,7 +468,7 @@ const createEmailTemplate = (data: ReservationFormData) => {
             </div>
             <div class="footer-contact">
                 <a href="tel:0625193143" class="footer-link">06 25 19 31 43</a> • 
-                <a href="https://taxi-sables-olonne.fr" class="footer-link">taxi-sables-olonne.fr</a>
+                <a href="https://www.taxi-sables-olonne.fr" class="footer-link">taxi-sables-olonne.fr</a>
             </div>
             <div class="timestamp">
                 Email automatique généré le ${new Date().toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}

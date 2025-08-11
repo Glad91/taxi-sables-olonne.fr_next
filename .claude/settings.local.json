@@ -29,7 +29,13 @@
       "WebFetch(domain:www.taxi-sables-olonne.fr)",
       "Bash(git revert:*)",
       "Bash(git stash:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:www.opengraph.xyz)",
+      "Bash(git rm:*)",
+      "Bash(lsof:*)",
+      "WebFetch(domain:taxi-sables-olonne.fr)",
+      "WebFetch(domain:www.semrush.com)",
+      "Bash(find:*)"
     ],
     "deny": []
   }

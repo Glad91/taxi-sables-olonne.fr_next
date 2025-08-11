@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'réserver taxi rapidement sables olonne',
   ],
   alternates: {
-    canonical: 'https://taxi-sables-olonne.fr/mots-cles-longue-traine',
+    canonical: 'https://www.taxi-sables-olonne.fr/mots-cles-longue-traine',
   },
 }
 
