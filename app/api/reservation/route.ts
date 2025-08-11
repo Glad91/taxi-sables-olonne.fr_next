@@ -5,6 +5,7 @@ import {
   formatPhoneNumber,
   type ReservationFormData,
 } from '@/app/lib/validation'
+import { autoSubmitAfterUpdate } from '@/lib/indexnow'
 
 // Configuration du transporteur Gmail
 const createTransporter = () => {
@@ -551,6 +552,12 @@ Contacter immédiatement: ${dataWithFormattedPhone.telephone}
 
     // Envoyer l'email
     await transporter.sendMail(mailOptions)
+
+    // Notifier les moteurs de recherche via IndexNow
+    // (asynchrone pour ne pas bloquer la réponse)
+    autoSubmitAfterUpdate(['/reservation', '/avis-clients']).catch(error => {
+      console.warn('IndexNow notification failed after reservation:', error)
+    })
 
     return NextResponse.json(
       {

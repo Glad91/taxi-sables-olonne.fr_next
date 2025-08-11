@@ -35,7 +35,9 @@
       "Bash(lsof:*)",
       "WebFetch(domain:taxi-sables-olonne.fr)",
       "WebFetch(domain:www.semrush.com)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(openssl rand:*)",
+      "Bash(node:*)"
     ],
     "deny": []
   }
