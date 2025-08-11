@@ -39,15 +39,15 @@ export async function submitToIndexNow(urls: string[]): Promise<{
   // Ensure URLs are absolute and clean
   const cleanUrls = urls.map(url => {
     if (url.startsWith('/')) {
-      return `${SITE_URL}${url}`
+      return `${SITE_URL}${url}`.trim()
     }
-    return url
+    return url.trim()
   }).filter(url => url.startsWith('http'))
 
   const submission: IndexNowSubmission = {
     host: new URL(SITE_URL).hostname,
     key: INDEXNOW_KEY,
-    keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+    keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`.trim(),
     urlList: cleanUrls
   }
 
