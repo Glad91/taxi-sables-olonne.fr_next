@@ -14,6 +14,24 @@ export const metadata: Metadata = {
     'taxi gare des sables',
     'transport gare',
   ],
+  openGraph: {
+    title: "Taxi Gare SNCF Sables-d'Olonne | Transfert 8€",
+    description: "Service taxi depuis la gare SNCF des Sables-d'Olonne. Transport rapide et ponctuel pour tous vos trains. À partir de 8€.",
+    url: 'https://taxi-sables-olonne.fr/gare-sables-olonne',
+    images: [
+      {
+        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Taxi Gare SNCF Sables-d\'Olonne - Service de transfert gare',
+      },
+    ],
+  },
+  twitter: {
+    title: "Taxi Gare SNCF Sables-d'Olonne | Transfert 8€",
+    description: "Service taxi depuis la gare SNCF des Sables-d'Olonne. Transport rapide et ponctuel, à partir de 8€.",
+    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+  },
   alternates: {
     canonical: 'https://taxi-sables-olonne.fr/gare-sables-olonne',
   },

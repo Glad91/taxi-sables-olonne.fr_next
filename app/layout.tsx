@@ -6,6 +6,7 @@ import GoogleTag from './components/GoogleTag'
 import WebVitals from './components/WebVitals'
 import JsonLD, { organizationSchema, websiteSchema } from './components/JsonLD'
 import CriticalCSS from './components/CriticalCSS'
+import OpenGraph from './components/OpenGraph'
 
 export const metadata: Metadata = {
   title: {
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
       "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes, transport médical.",
     images: [
       {
-        url: 'https://taxi-sables-olonne.fr/og-image.jpg',
+        url: 'https://taxi-sables-olonne.fr/og-image.png',
         width: 1200,
         height: 630,
         alt: "Taxi Sables-d'Olonne - Service de taxi professionnel",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     title: "Taxi Sables-d'Olonne | Chauffeur privé 24h/24",
     description:
       "Service de taxi professionnel aux Sables-d'Olonne. Réservation 24h/24, transferts gare SNCF, aéroport Nantes.",
-    images: ['https://taxi-sables-olonne.fr/og-image.jpg'],
+    images: ['https://taxi-sables-olonne.fr/og-image.png'],
   },
   robots: {
     index: true,

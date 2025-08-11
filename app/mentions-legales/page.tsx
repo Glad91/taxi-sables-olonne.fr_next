@@ -5,6 +5,27 @@ export const metadata: Metadata = {
   title: "Mentions légales - Taxi Sables-d'Olonne",
   description:
     "Mentions légales du service de taxi professionnel aux Sables-d'Olonne. Informations légales, coordonnées, conditions d'utilisation.",
+  openGraph: {
+    title: "Mentions légales - Taxi Sables-d'Olonne",
+    description: "Mentions légales du service de taxi professionnel aux Sables-d'Olonne. Informations légales et coordonnées.",
+    url: 'https://taxi-sables-olonne.fr/mentions-legales',
+    images: [
+      {
+        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mentions légales Taxi Sables-d\'Olonne - Informations légales',
+      },
+    ],
+  },
+  twitter: {
+    title: "Mentions légales - Taxi Sables-d'Olonne",
+    description: "Mentions légales du service taxi professionnel aux Sables-d'Olonne.",
+    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+  },
+  alternates: {
+    canonical: 'https://taxi-sables-olonne.fr/mentions-legales',
+  },
   robots: {
     index: true,
     follow: true,

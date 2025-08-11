@@ -13,6 +13,24 @@ export const metadata: Metadata = {
     'réserver taxi en ligne',
     "booking taxi sables d'olonne",
   ],
+  openGraph: {
+    title: "Réservation taxi en ligne | Taxi Sables-d'Olonne",
+    description: "Réservez votre taxi aux Sables-d'Olonne en ligne. Formulaire de réservation simple et rapide. Service 24h/24.",
+    url: 'https://taxi-sables-olonne.fr/reservation',
+    images: [
+      {
+        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Réservation taxi Sables-d\'Olonne - Service de réservation en ligne',
+      },
+    ],
+  },
+  twitter: {
+    title: "Réservation taxi en ligne | Taxi Sables-d'Olonne",
+    description: "Réservez votre taxi aux Sables-d'Olonne en ligne. Formulaire simple et rapide. Service 24h/24.",
+    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+  },
   alternates: {
     canonical: 'https://taxi-sables-olonne.fr/reservation',
   },

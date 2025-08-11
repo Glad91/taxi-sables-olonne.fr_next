@@ -16,6 +16,24 @@ export const metadata: Metadata = {
     'devis taxi gratuit',
     'prix transparent taxi',
   ],
+  openGraph: {
+    title: "Tarifs taxi 2024 | Prix gare 8€, aéroport 230€",
+    description: "Tarifs taxi Sables-d'Olonne 2024 : gare SNCF 8€, aéroport Nantes 230€, transport médical VSL remboursé. Devis gratuit.",
+    url: 'https://taxi-sables-olonne.fr/tarifs',
+    images: [
+      {
+        url: 'https://taxi-sables-olonne.fr/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Tarifs taxi Sables-d\'Olonne 2024 - Prix transparents et compétitifs',
+      },
+    ],
+  },
+  twitter: {
+    title: "Tarifs taxi 2024 | Prix gare 8€, aéroport 230€",
+    description: "Tarifs taxi Sables-d'Olonne 2024 : gare 8€, aéroport Nantes 230€, VSL remboursé. Devis gratuit.",
+    images: ['https://taxi-sables-olonne.fr/og-image.png'],
+  },
   alternates: {
     canonical: 'https://taxi-sables-olonne.fr/tarifs',
   },
