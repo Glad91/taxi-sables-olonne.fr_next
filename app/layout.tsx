@@ -6,7 +6,6 @@ import GoogleTag from './components/GoogleTag'
 import WebVitals from './components/WebVitals'
 import JsonLD, { organizationSchema, websiteSchema } from './components/JsonLD'
 import CriticalCSS from './components/CriticalCSS'
-import OpenGraph from './components/OpenGraph'
 
 export const metadata: Metadata = {
   title: {
@@ -104,7 +103,6 @@ export default function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           />
         </noscript>
-        <link rel="canonical" href="https://taxi-sables-olonne.fr" />
         <meta name="geo.region" content="FR-85" />
         <meta name="geo.placename" content="Les Sables-d'Olonne" />
         <meta name="geo.position" content="46.496002;-1.783313" />
