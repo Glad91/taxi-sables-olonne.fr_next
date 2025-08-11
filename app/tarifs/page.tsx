@@ -5,9 +5,9 @@ import StructuredData from '../components/StructuredData'
 import Breadcrumb, { breadcrumbConfigs } from '../components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Tarifs 2024 | Prix gare, aéroport, VSL',
+  title: 'Tarifs 2025 | Prix gare, aéroport, VSL',
   description:
-    "Tarifs taxi Sables-d'Olonne 2024 : gare SNCF 8€, aéroport Nantes 230€, transport médical VSL remboursé. Devis gratuit pour longue distance. ☎️ 06 25 19 31 43",
+    "Tarifs taxi Sables-d'Olonne 2025 : gare SNCF 8€, aéroport Nantes 230€, transport médical VSL remboursé. Devis gratuit pour longue distance. ☎️ 06 25 19 31 43",
   keywords: [
     "tarifs taxi sables d'olonne 2024",
     'prix taxi gare SNCF',

@@ -6,6 +6,8 @@ import GoogleTag from './components/GoogleTag'
 import WebVitals from './components/WebVitals'
 import JsonLD, { organizationSchema, websiteSchema } from './components/JsonLD'
 import CriticalCSS from './components/CriticalCSS'
+import { Analytics } from "@vercel/analytics/next"
+
 
 export const metadata: Metadata = {
   title: {
@@ -114,6 +116,7 @@ export default function RootLayout({
       <body className="antialiased">
         <GoogleTag />
         <WebVitals />
+        <Analytics />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
