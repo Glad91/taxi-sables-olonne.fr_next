@@ -12,7 +12,7 @@ interface IndexNowSubmission {
 }
 
 const INDEXNOW_KEY = '88f276d7dbb82450e30ce16fd18deeb0'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.taxi-sables-olonne.fr'
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.taxi-sables-olonne.fr').trim()
 
 // IndexNow supported search engines
 const INDEXNOW_ENDPOINTS = [
